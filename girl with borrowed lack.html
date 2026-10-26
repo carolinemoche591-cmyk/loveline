@@ -1,0 +1,5026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Girl Who Borrowed Luck | Loveline</title>
+
+    <meta name="description" content="The Girl Who Borrowed Luck — a funny fantasy romance novel by Loveline.">
+
+    <style>
+        /* =========================================================
+           THE GIRL WHO BORROWED LUCK
+           Premium Novel-Style Design
+        ========================================================= */
+
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+        :root {
+            --background: #f5f0e7;
+            --paper: #fffdf8;
+            --paper-dark: #eee5d5;
+            --text: #29241f;
+            --muted: #766d63;
+            --gold: #b38a3c;
+            --gold-light: #d7bb78;
+            --brown: #4a3527;
+            --line: rgba(100, 75, 40, 0.18);
+            --shadow: rgba(40, 28, 15, 0.12);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background:
+                radial-gradient(circle at 20% 10%, rgba(179, 138, 60, 0.08), transparent 30%),
+                radial-gradient(circle at 80% 80%, rgba(179, 138, 60, 0.07), transparent 30%),
+                var(--background);
+            color: var(--text);
+            font-family: "Inter", sans-serif;
+            line-height: 1.9;
+        }
+
+        /* =========================
+           COVER
+        ========================= */
+
+        .cover {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(39, 29, 22, 0.98),
+                    rgba(69, 48, 32, 0.96)
+                );
+            color: white;
+        }
+
+        .cover::before {
+            content: "";
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border: 1px solid rgba(215, 187, 120, 0.25);
+            border-radius: 50%;
+            top: -250px;
+            right: -180px;
+        }
+
+        .cover::after {
+            content: "";
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            border: 1px solid rgba(215, 187, 120, 0.15);
+            border-radius: 50%;
+            bottom: -200px;
+            left: -150px;
+        }
+
+        .cover-content {
+            width: min(850px, 100%);
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            padding: 70px 35px;
+            border: 1px solid rgba(215, 187, 120, 0.35);
+            background: rgba(255, 255, 255, 0.025);
+            backdrop-filter: blur(5px);
+        }
+
+        .publisher {
+            font-family: "Cormorant Garamond", serif;
+            text-transform: uppercase;
+            letter-spacing: 7px;
+            color: var(--gold-light);
+            font-size: 0.85rem;
+            margin-bottom: 55px;
+        }
+
+        .ornament {
+            color: var(--gold-light);
+            font-size: 1.5rem;
+            letter-spacing: 10px;
+            margin-bottom: 28px;
+        }
+
+        .cover h1 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(3.2rem, 9vw, 7rem);
+            line-height: 0.9;
+            font-weight: 600;
+            letter-spacing: -2px;
+            margin-bottom: 25px;
+        }
+
+        .cover h1 span {
+            display: block;
+            color: var(--gold-light);
+        }
+
+        .subtitle {
+            max-width: 620px;
+            margin: 0 auto 45px;
+            color: #ddd1c1;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 1.35rem;
+            font-style: italic;
+        }
+
+        .author {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 1.3rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        .cover-line {
+            width: 90px;
+            height: 1px;
+            background: var(--gold-light);
+            margin: 35px auto;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(42, 31, 23, 0.96);
+            border-bottom: 1px solid rgba(215, 187, 120, 0.25);
+            backdrop-filter: blur(12px);
+        }
+
+        .nav-inner {
+            max-width: 1150px;
+            margin: auto;
+            padding: 13px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .nav-title {
+            font-family: "Cormorant Garamond", serif;
+            color: var(--gold-light);
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 22px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #eee4d5;
+            text-decoration: none;
+            font-size: 0.78rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold-light);
+        }
+
+        /* =========================
+           NOVEL AREA
+        ========================= */
+
+        .book {
+            max-width: 950px;
+            margin: 70px auto;
+            padding: 0 24px;
+        }
+
+        .chapter {
+            background: var(--paper);
+            margin-bottom: 70px;
+            padding: clamp(35px, 6vw, 80px);
+            box-shadow:
+                0 15px 50px var(--shadow),
+                0 2px 5px rgba(0,0,0,0.03);
+            position: relative;
+        }
+
+        .chapter::before {
+            content: "";
+            position: absolute;
+            top: 22px;
+            left: 22px;
+            right: 22px;
+            bottom: 22px;
+            border: 1px solid var(--line);
+            pointer-events: none;
+        }
+
+        .chapter-number {
+            text-align: center;
+            color: var(--gold);
+            font-family: "Cormorant Garamond", serif;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 15px;
+        }
+
+        .chapter h2 {
+            text-align: center;
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(2.3rem, 6vw, 4.4rem);
+            line-height: 1;
+            font-weight: 600;
+            color: var(--brown);
+            margin-bottom: 25px;
+        }
+
+        .chapter-intro {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            text-align: center;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 1.25rem;
+            font-style: italic;
+            color: var(--muted);
+        }
+
+        .chapter p {
+            max-width: 730px;
+            margin: 0 auto 1.45em;
+            font-size: 1.02rem;
+            font-weight: 400;
+            text-align: justify;
+        }
+
+        /* =========================
+           DROP CAP
+        ========================= */
+
+        .chapter p:first-of-type::first-letter {
+            float: left;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 5.3rem;
+            line-height: 0.75;
+            padding-right: 10px;
+            padding-top: 8px;
+            color: var(--gold);
+        }
+
+        /* =========================
+           SPECIAL QUOTES
+        ========================= */
+
+        .quote {
+            max-width: 700px;
+            margin: 45px auto;
+            padding: 25px 30px;
+            border-left: 3px solid var(--gold);
+            background: rgba(179, 138, 60, 0.055);
+            font-family: "Cormorant Garamond", serif;
+            font-size: 1.55rem;
+            font-style: italic;
+            color: var(--brown);
+        }
+
+        .quote::before {
+            content: "“";
+            font-size: 4rem;
+            color: var(--gold-light);
+            line-height: 0;
+            vertical-align: -0.45em;
+            margin-right: 5px;
+        }
+
+        /* =========================
+           SECTION DIVIDER
+        ========================= */
+
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            max-width: 500px;
+            margin: 55px auto;
+            color: var(--gold);
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: var(--line);
+        }
+
+        .divider span {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 1.2rem;
+        }
+
+        /* =========================
+           ENDING
+        ========================= */
+
+        .ending {
+            text-align: center;
+            padding: 100px 30px;
+            margin-bottom: 0;
+        }
+
+        .ending h2 {
+            font-size: clamp(2.5rem, 7vw, 5rem);
+        }
+
+        .ending p {
+            text-align: center;
+        }
+
+        .final-line {
+            color: var(--gold);
+            font-family: "Cormorant Garamond", serif;
+            font-size: 1.7rem;
+            font-style: italic;
+            margin-top: 40px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #2a1f17;
+            color: #cfc2b1;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        footer h3 {
+            font-family: "Cormorant Garamond", serif;
+            color: var(--gold-light);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            font-size: 0.85rem;
+            opacity: 0.75;
+        }
+
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            .nav-inner {
+                justify-content: center;
+            }
+
+            .nav-title {
+                display: none;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 0.65rem;
+            }
+
+            .book {
+                margin: 30px auto;
+                padding: 0 12px;
+            }
+
+            .chapter {
+                padding: 35px 25px;
+                margin-bottom: 35px;
+            }
+
+            .chapter::before {
+                top: 12px;
+                left: 12px;
+                right: 12px;
+                bottom: 12px;
+            }
+
+            .chapter p {
+                text-align: left;
+                font-size: 0.98rem;
+            }
+
+            .cover-content {
+                padding: 50px 20px;
+            }
+
+            .publisher {
+                letter-spacing: 4px;
+            }
+        }
+
+        /* =========================
+           PRINT
+        ========================= */
+
+        @media print {
+
+            .nav {
+                display: none;
+            }
+
+            body {
+                background: white;
+            }
+
+            .cover {
+                min-height: 100vh;
+                page-break-after: always;
+            }
+
+            .chapter {
+                box-shadow: none;
+                page-break-before: always;
+                margin: 0;
+            }
+
+            footer {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================================
+         COVER
+    ========================================================= -->
+
+    <header class="cover" id="top">
+
+        <div class="cover-content">
+
+            <div class="publisher">
+                Loveline Stories
+            </div>
+
+            <div class="ornament">
+                ✦ ───── ✧ ───── ✦
+            </div>
+
+            <h1>
+                The Girl
+                <span>Who Borrowed Luck</span>
+            </h1>
+
+            <div class="cover-line"></div>
+
+            <p class="subtitle">
+                A funny fantasy romance about one very unlucky girl,
+                one strangely lucky man, and a secret that should have
+                remained buried.
+            </p>
+
+            <div class="author">
+                By Loveline
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         NAVIGATION
+    ========================================================= -->
+
+    <nav class="nav">
+
+        <div class="nav-inner">
+
+            <div class="nav-title">
+                The Girl Who Borrowed Luck
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#top">Cover</a>
+                </li>
+
+                <li>
+                    <a href="#chapter1">Chapter 1</a>
+                </li>
+
+                <li>
+                    <a href="#chapter10">Chapter 10</a>
+                </li>
+
+                <li>
+                    <a href="#chapter20">Chapter 20</a>
+                </li>
+
+                <li>
+                    <a href="#chapter30">Ending</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================================================
+         BOOK
+    ========================================================= -->
+
+    <main class="book">
+
+
+        <!-- CHAPTER 1 -->
+
+        <section class="chapter" id="chapter1">
+
+            <div class="chapter-number">
+                Chapter One
+            </div>
+
+            <h2>
+                Amelia Hart and the Universe's Personal Grudge
+            </h2>
+
+            <p class="chapter-intro">
+                Some people have bad days. Amelia Hart had bad decades.
+            </p>
+
+            <p>
+                Amelia Hart had always believed that bad luck was something
+                that happened occasionally, like rain in summer or finding
+                out that the restaurant had run out of your favourite dessert,
+                but somewhere between the age of seven and twenty-two she had
+                gradually come to the conclusion that bad luck was not
+                something that happened to her; bad luck was something that
+                had apparently chosen her, rented a small apartment inside
+                her life, unpacked several suitcases, put its feet on the
+                table and decided it was never leaving.
+            </p>
+
+            <p>
+                She had evidence. At seven, she had fallen into a pond while
+                trying to rescue a duck that had not needed rescuing. At nine,
+                she had accidentally won a school competition she had never
+                entered because her teacher had confused her name with another
+                student's, and when she tried to explain the mistake, the
+                microphone fell on her head. At twelve, she had been chased
+                by a goose for nearly half a kilometre, even though she had
+                never met the goose before and had no idea why it appeared to
+                have such strong personal feelings about her.
+            </p>
+
+            <p>
+                At fifteen, she had gone to a birthday party wearing a
+                beautiful cream dress, only to discover that the birthday
+                cake had somehow been placed directly above the chair she sat
+                on, and when the ceiling decoration fell, the cake followed
+                it. At eighteen, she had bought a lottery ticket with her
+                last few coins. She had won. The prize was another lottery
+                ticket. The second ticket had won nothing. At twenty-one,
+                she had finally decided that perhaps adulthood would bring
+                her some dignity. It had not.
+            </p>
+
+            <p>
+                Now, at twenty-two, Amelia stood in front of her bedroom
+                mirror on a Tuesday morning, wearing a soft blue sweater,
+                dark trousers and one sock that was mysteriously inside out,
+                while she tried to convince herself that today would be
+                different.
+            </p>
+
+            <p>
+                She had long, warm brown hair that naturally curled slightly
+                at the ends, although she usually tied it into a loose
+                ponytail because she claimed that spending twenty minutes
+                fighting with her hair before breakfast was not an acceptable
+                use of her life. Her eyes were hazel, bright enough to look
+                almost green under certain light and almost golden under
+                others, and whenever she was amused there was a little crease
+                near her left eye that made it obvious she was trying not to
+                laugh.
+            </p>
+
+            <p>
+                She looked perfectly ordinary. That was the problem. There
+                was nothing about Amelia that suggested she was the centre of
+                a supernatural mystery. She didn't have glowing eyes. She
+                couldn't fly. She didn't talk to ghosts. She couldn't turn
+                invisible. She couldn't read minds. As far as Amelia knew,
+                her only supernatural ability was attracting objects
+                travelling at unreasonable speeds directly toward her
+                forehead.
+            </p>
+
+            <p>
+                That morning, she stood in the kitchen holding a mug of tea.
+                She took one sip. The handle broke. The mug fell. Amelia
+                watched it hit the floor. It didn't break. She smiled.
+            </p>
+
+            <div class="quote">
+                Nice try.
+            </div>
+
+            <p>
+                Then the tea splashed upward and landed directly on her
+                white shirt. Amelia stared down at herself. She slowly
+                looked toward the ceiling.
+            </p>
+
+            <p>
+                "I would like to formally complain."
+            </p>
+
+            <p>
+                Nothing answered.
+            </p>
+
+            <p>
+                "Okay."
+            </p>
+
+            <p>
+                She wiped herself with a towel. Then she opened the
+                refrigerator. The light didn't come on. She opened it again.
+                Nothing. She closed it. Opened it. Still nothing.
+            </p>
+
+            <p>
+                Amelia sighed. "Of course."
+            </p>
+
+            <p>
+                She reached inside. A container of yoghurt fell out. She
+                caught it. She smiled.
+            </p>
+
+            <p>
+                "Got you."
+            </p>
+
+            <p>
+                Then the lid opened. Yoghurt landed on her cheek.
+            </p>
+
+            <p>
+                Amelia closed her eyes. She whispered, with the exhausted
+                patience of a woman who had already fought two battles before
+                seven in the morning:
+            </p>
+
+            <div class="quote">
+                Today is going to be wonderful.
+            </div>
+
+            <p>
+                And somewhere, though Amelia didn't know it yet, something
+                was already listening.
+            </p>
+
+        </section>
+
+
+        <!-- CHAPTER 2 -->
+
+        <section class="chapter">
+
+            <div class="chapter-number">
+                Chapter Two
+            </div>
+
+            <h2>
+                The Stranger With the Coffee
+            </h2>
+
+            <p class="chapter-intro">
+                Sometimes the person who changes your life arrives carrying
+                coffee.
+            </p>
+
+            <p>
+                The first time Amelia met Daniel Vale, she was running late,
+                carrying a handbag that had somehow become heavy enough to
+                qualify as gym equipment, holding an umbrella that she did not
+                need, and trying to eat a piece of toast while simultaneously
+                tying her shoelace.
+            </p>
+
+            <p>
+                This was not a good combination. It became considerably worse
+                when she walked directly into a lamppost. The impact wasn't
+                serious, but it was loud enough for three people to turn
+                around.
+            </p>
+
+            <p>
+                Amelia stood there with her eyes closed. The toast was still
+                in her mouth. A woman walking past stared at her.
+            </p>
+
+            <p>
+                Amelia removed the toast and said, "Good morning."
+            </p>
+
+            <p>
+                The woman smiled awkwardly. "Good morning."
+            </p>
+
+            <p>
+                Amelia nodded. "Nothing happened."
+            </p>
+
+            <p>
+                The woman continued walking. "I didn't see anything."
+            </p>
+
+            <p>
+                "Thank you."
+            </p>
+
+            <p>
+                Amelia continued toward the bus stop. She arrived just as the
+                bus doors closed. She stared. The driver stared at her
+                through the windshield. Amelia lifted one hand. The driver
+                shook his head.
+            </p>
+
+            <p>
+                She ran alongside the bus for three steps. The bus continued
+                moving.
+            </p>
+
+            <div class="quote">
+                You're not serious!
+            </div>
+
+            <p>
+                The bus disappeared around the corner. Amelia stood there
+                breathing heavily. Then someone beside her said, "You know,
+                technically, running after it probably makes the driver less
+                likely to stop."
+            </p>
+
+            <p>
+                Amelia turned. A young man was standing there holding a
+                takeaway coffee.
+            </p>
+
+            <p>
+                He was tall, perhaps around six feet, with dark blond hair
+                that looked as though he had combed it with his fingers rather
+                than a brush. His eyes were blue-grey, calm and slightly
+                amused, and he had the irritatingly relaxed expression of
+                someone whose morning had probably gone exactly according to
+                plan.
+            </p>
+
+            <p>
+                He wore a dark brown coat over a cream sweater, black trousers
+                and worn boots. There was something effortlessly attractive
+                about him, not because he seemed to be trying to impress
+                anyone, but because he seemed completely unaware that he was
+                doing it.
+            </p>
+
+            <p>
+                Amelia looked at him. Then she looked at the road. Then back
+                at him.
+            </p>
+
+            <p>
+                "I know."
+            </p>
+
+            <p>
+                He smiled. "Just making conversation."
+            </p>
+
+            <p>
+                "I've had a difficult morning."
+            </p>
+
+            <p>
+                "I noticed."
+            </p>
+
+            <p>
+                "You saw the lamppost?"
+            </p>
+
+            <p>
+                "I saw the lamppost lose."
+            </p>
+
+            <p>
+                Amelia stared at him for a second. Then she laughed. It
+                surprised her. She hadn't intended to laugh.
+            </p>
+
+            <p>
+                Daniel smiled.
+            </p>
+
+            <p>
+                "There. Better."
+            </p>
+
+            <p>
+                "What?"
+            </p>
+
+            <p>
+                "You were angry."
+            </p>
+
+            <p>
+                "I wasn't angry."
+            </p>
+
+            <p>
+                "You were."
+            </p>
+
+            <p>
+                "I was frustrated."
+            </p>
+
+            <p>
+                "That's angry wearing a nicer dress."
+            </p>
+
+            <p>
+                Amelia looked at him. "That's actually a very good sentence."
+            </p>
+
+            <p>
+                "I have those occasionally."
+            </p>
+
+            <p>
+                The next bus arrived. They boarded. Amelia sat beside the
+                window. Daniel sat beside her.
+            </p>
+
+            <p>
+                She looked at him. "Do you always sit next to strangers?"
+            </p>
+
+            <p>
+                "Only interesting ones."
+            </p>
+
+            <p>
+                She raised an eyebrow. "You don't know me."
+            </p>
+
+            <p>
+                "I know you lost a fight with a lamppost."
+            </p>
+
+            <p>
+                "It was a draw."
+            </p>
+
+            <p>
+                Daniel laughed.
+            </p>
+
+            <p>
+                The bus began moving. Amelia took out her phone. She checked
+                the time. Then the phone slipped from her hand.
+            </p>
+
+            <p>
+                She gasped.
+            </p>
+
+            <p>
+                Before it reached the floor, Daniel caught it.
+            </p>
+
+            <p>
+                He handed it back.
+            </p>
+
+            <div class="quote">
+                You're welcome.
+            </div>
+
+            <p>
+                Amelia blinked. "Thank you."
+            </p>
+
+            <p>
+                She looked at the phone. Then at him. Something felt strange.
+                Not frightening. Just strange. She couldn't explain it.
+            </p>
+
+            <p>
+                The bus turned sharply. Someone's bag fell. A man's newspaper
+                flew away. A child dropped a toy. Amelia's phone remained
+                perfectly still. Her coffee cup didn't spill. Her handbag
+                didn't fall. Nothing happened.
+            </p>
+
+            <p>
+                She stared at the peaceful situation.
+            </p>
+
+            <p>
+                Daniel noticed.
+            </p>
+
+            <p>
+                "What?"
+            </p>
+
+            <p>
+                "Nothing."
+            </p>
+
+            <p>
+                "You look suspicious."
+            </p>
+
+            <p>
+                "I am suspicious."
+            </p>
+
+            <p>
+                "Of me?"
+            </p>
+
+            <p>
+                "Maybe."
+            </p>
+
+            <p>
+                He smiled.
+            </p>
+
+            <p>
+                "Good."
+            </p>
+
+            <p>
+                Then the bus stopped. Daniel's coffee tipped. Amelia
+                instinctively reached for it. But before she could touch it,
+                the cup stopped in mid-air.
+            </p>
+
+            <p>
+                For half a second, neither of them moved.
+            </p>
+
+            <p>
+                The cup floated between them.
+            </p>
+
+            <p>
+                Daniel calmly caught it.
+            </p>
+
+            <p>
+                Amelia stared.
+            </p>
+
+            <p>
+                He stared at her.
+            </p>
+
+            <p>
+                She pointed at the cup.
+            </p>
+
+            <p>
+                "You did that."
+            </p>
+
+            <p>
+                "No."
+            </p>
+
+            <p>
+                "Your coffee was floating."
+            </p>
+
+            <p>
+                "Maybe it was having a good day."
+            </p>
+
+            <p>
+                "Coffee doesn't have good days."
+            </p>
+
+            <p>
+                "You don't know that."
+            </p>
+
+            <p>
+                Amelia narrowed her eyes.
+            </p>
+
+            <p>
+                "Who are you?"
+            </p>
+
+            <p>
+                He smiled.
+            </p>
+
+            <p>
+                "Daniel."
+            </p>
+
+            <p>
+                "Just Daniel?"
+            </p>
+
+            <p>
+                "For now."
+            </p>
+
+        </section>
+
+
+        <!-- CHAPTER 3 -->
+
+        <section class="chapter">
+
+            <div class="chapter-number">Chapter Three</div>
+
+            <h2>The Day Everything Went Right</h2>
+
+            <p class="chapter-intro">
+                Amelia discovered something unbelievable: she could actually
+                have a good day.
+            </p>
+
+            <p>
+                Amelia discovered something unbelievable that afternoon. She
+                had good luck. For approximately six hours. And those six
+                hours were so beautiful that Amelia nearly cried.
+            </p>
+
+            <p>
+                She walked into a café. There was one empty table. She got it.
+                She ordered her favourite cake. They had it. She paid. The
+                exact amount came out of her wallet. No missing coins. No
+                wrong change. No machine malfunction. Nothing.
+            </p>
+
+            <p>
+                Amelia sat down. She took a bite. The cake was perfect. She
+                looked toward heaven.
+            </p>
+
+            <div class="quote">
+                Thank you.
+            </div>
+
+            <p>
+                Daniel arrived shortly afterward and sat across from her.
+                "You look happy."
+            </p>
+
+            <p>
+                "I am."
+            </p>
+
+            <p>
+                "Why?"
+            </p>
+
+            <p>
+                "Nothing has gone wrong."
+            </p>
+
+            <p>
+                Daniel smiled. "Congratulations."
+            </p>
+
+            <p>
+                "I think I'm cured."
+            </p>
+
+            <p>
+                "Cured of what?"
+            </p>
+
+            <p>
+                "My life."
+            </p>
+
+            <p>
+                He laughed. Amelia continued eating.
+            </p>
+
+            <p>
+                For the next few hours, they walked around the city together.
+                They talked about everything. Daniel told her he liked old
+                books, terrible movies, quiet cafés and people who could laugh
+                at themselves. Amelia told him she liked music, rainy
+                evenings, strawberry cake, sleeping late on weekends and
+                people who didn't take themselves too seriously.
+            </p>
+
+            <p>
+                Daniel asked her why she always carried an umbrella. She
+                answered honestly.
+            </p>
+
+            <div class="quote">
+                Because something always falls from the sky.
+            </div>
+
+            <p>
+                He laughed. "You can't be serious."
+            </p>
+
+            <p>
+                "I am."
+            </p>
+
+            <p>
+                At that exact moment, a bird dropped something. It landed
+                three metres away.
+            </p>
+
+            <p>
+                Amelia pointed.
+            </p>
+
+            <p>
+                "See?"
+            </p>
+
+            <p>
+                Daniel looked at the bird, then at Amelia.
+            </p>
+
+            <p>
+                "That doesn't count."
+            </p>
+
+            <p>
+                "It absolutely counts."
+            </p>
+
+            <p>
+                He laughed again.
+            </p>
+
+            <p>
+                Amelia smiled. She liked his laugh. She liked the way he
+                listened. She liked that he never made her feel ridiculous
+                when she described her bad luck.
+            </p>
+
+            <p>
+                And she liked something else. When she was with Daniel,
+                things didn't go wrong.
+            </p>
+
+            <p>
+                They were walking beside a fountain when Amelia accidentally
+                dropped her purse. Daniel caught it. She bumped into a
+                stranger. The stranger apologized. A cyclist almost hit them.
+                The cyclist somehow avoided them. A waiter dropped a tray. It
+                landed perfectly on a table.
+            </p>
+
+            <p>
+                A dog ran toward Amelia.
+            </p>
+
+            <p>
+                Instead of biting her, it sat down and offered her its paw.
+            </p>
+
+            <p>
+                Amelia stared at it.
+            </p>
+
+            <p>
+                Daniel stared at it.
+            </p>
+
+            <p>
+                The dog looked between them.
+            </p>
+
+            <p>
+                Amelia shook its paw.
+            </p>
+
+            <div class="quote">
+                You're new.
+            </div>
+
+            <p>
+                The dog wagged its tail. Daniel laughed so hard he had to sit
+                down.
+            </p>
+
+            <p>
+                For once, life felt easy. And that frightened her more than
+                bad luck ever had.
+            </p>
+
+        </section>
+
+
+        <!-- CHAPTER 4 -->
+
+        <section class="chapter">
+
+            <div class="chapter-number">Chapter Four</div>
+
+            <h2>Daniel's Secret</h2>
+
+            <p>
+                Daniel knew something was wrong. He had known since the first
+                moment he saw Amelia. There was a strange energy around her.
+                He couldn't see it exactly. He couldn't touch it. But he could
+                feel it. It was like standing near a storm that hadn't decided
+                whether to rain.
+            </p>
+
+            <p>
+                Daniel had a secret. He had always had one. He could
+                manipulate probability. He couldn't make impossible things
+                happen, not exactly, but he could influence the chances of
+                things happening.
+            </p>
+
+            <p>
+                If there was a one-percent chance that a coin would land on
+                its edge, Daniel could make that one percent become ninety
+                percent. If there was a ninety-percent chance that a glass
+                would fall, he could make it five percent.
+            </p>
+
+            <p>
+                He called it Luck Bending.
+            </p>
+
+            <p>
+                He had learned to control it when he was sixteen. Before
+                that, it had been dangerous. Once, he had accidentally made
+                every traffic light in his neighbourhood turn green at the
+                same time. Another time, he had won twelve raffle prizes in
+                one afternoon and accidentally attracted the attention of a
+                man who believed Daniel was using magic to manipulate the
+                economy.
+            </p>
+
+            <p>
+                Daniel's ability wasn't perfect. And Amelia's presence was
+                doing something he had never experienced before.
+            </p>
+
+            <p>
+                It was absorbing his luck.
+            </p>
+
+            <p>
+                Whenever she stood near him, his power became stronger. And
+                her misfortune disappeared.
+            </p>
+
+            <p>
+                Daniel tested it carefully. He dropped a coin. It landed
+                standing upright. He tossed a bottle cap. It landed perfectly
+                on a narrow wall. He threw a paper ball toward a bin without
+                looking. It went in.
+            </p>
+
+            <p>
+                Then Amelia walked away.
+            </p>
+
+            <p>
+                The coin rolled off the table. The bottle cap fell. The paper
+                ball bounced off the bin and hit Daniel in the forehead.
+            </p>
+
+            <p>
+                Daniel stared at the paper.
+            </p>
+
+            <div class="quote">
+                Interesting.
+            </div>
+
+            <p>
+                He looked toward Amelia. She was walking away. Three seconds
+                later, she slipped on absolutely nothing.
+            </p>
+
+            <p>
+                Daniel caught her.
+            </p>
+
+            <p>
+                She looked embarrassed.
+            </p>
+
+            <p>
+                "Thanks."
+            </p>
+
+            <p>
+                He smiled.
+            </p>
+
+            <p>
+                "No problem."
+            </p>
+
+            <p>
+                Inside his mind, however, one thought repeated itself.
+            </p>
+
+            <div class="quote">
+                Her bad luck isn't disappearing. It's moving.
+            </div>
+
+        </section>
+
+
+        <!-- CHAPTER 5 -->
+
+        <section class="chapter">
+
+            <div class="chapter-number">Chapter Five</div>
+
+            <h2>The Distance Rule</h2>
+
+            <p>
+                They discovered the rule by accident. Amelia was standing in
+                Daniel's apartment kitchen while he prepared dinner. She was
+                cutting vegetables. Daniel was cooking. Everything was
+                peaceful.
+            </p>
+
+            <p>
+                Too peaceful.
+            </p>
+
+            <p>
+                Amelia looked at the knife, then at Daniel.
+            </p>
+
+            <p>
+                "I think something's wrong."
+            </p>
+
+            <p>
+                Daniel turned.
+            </p>
+
+            <p>
+                "What?"
+            </p>
+
+            <p>
+                She pointed at the kitchen.
+            </p>
+
+            <p>
+                "Nothing has happened."
+            </p>
+
+            <p>
+                Daniel laughed.
+            </p>
+
+            <p>
+                "That's the problem?"
+            </p>
+
+            <p>
+                "Yes."
+            </p>
+
+            <p>
+                She waited. Nothing happened. She dropped a carrot. It landed
+                normally. She opened a drawer. It opened normally. She reached
+                for a plate. The plate remained in her hand.
+            </p>
+
+            <p>
+                She looked at Daniel.
+            </p>
+
+            <p>
+                "This is unnatural."
+            </p>
+
+            <p>
+                Then Amelia's phone rang. She stepped outside to answer it.
+            </p>
+
+            <p>
+                The moment she crossed the doorway, a flowerpot fell from a
+                balcony. It missed her by centimetres.
+            </p>
+
+            <p>
+                She stared at it.
+            </p>
+
+            <div class="quote">
+                What?
+            </div>
+
+            <p>
+                She took another step. A bicycle nearly hit her. She stepped
+                backward. A delivery box fell from a doorway. She jumped
+                sideways. The box landed where she had been standing.
+            </p>
+
+            <p>
+                Amelia slowly turned around. Daniel was standing in the
+                doorway. He looked at the flowerpot, then the bicycle, then
+                the box, then Amelia.
+            </p>
+
+            <div class="quote">
+                Come back inside.
+            </div>
+
+            <p>
+                She did.
+            </p>
+
+            <p>
+                The moment she entered, everything stopped.
+            </p>
+
+            <p>
+                Silence.
+            </p>
+
+            <p>
+                Daniel slowly crossed his arms.
+            </p>
+
+            <div class="quote">
+                We have a problem.
+            </div>
+
+            <p>
+                Amelia nodded.
+            </p>
+
+            <p>
+                "I know."
+            </p>
+
+            <p>
+                He looked at her.
+            </p>
+
+            <p>
+                "Your bad luck disappears when you're close to me."
+            </p>
+
+            <p>
+                Amelia blinked.
+            </p>
+
+            <p>
+                "And comes back when I'm away."
+            </p>
+
+            <p>
+                "Exactly."
+            </p>
+
+            <p>
+                She thought about it.
+            </p>
+
+            <p>
+                Then she smiled.
+            </p>
+
+            <div class="quote">
+                So... you are basically a human umbrella.
+            </div>
+
+            <p>
+                Daniel stared at her.
+            </p>
+
+            <p>
+                "What?"
+            </p>
+
+            <p>
+                "You protect me from disaster."
+            </p>
+
+            <p>
+                Daniel laughed.
+            </p>
+
+            <p>
+                "That's not what I meant."
+            </p>
+
+            <p>
+                "I like it."
+            </p>
+
+            <p>
+                "You would."
+            </p>
+
+            <p>
+                She smiled.
+            </p>
+
+            <p>
+                Then she asked:
+            </p>
+
+            <p>
+                "How far away can I be?"
+            </p>
+
+            <p>
+                Daniel didn't know.
+            </p>
+
+            <p>
+                They tested it.
+            </p>
+
+            <p>
+                One metre. Fine. Five metres. Fine. Ten metres. Fine. Twenty
+                metres. Fine. Fifty metres. Amelia dropped her phone. One
+                hundred metres. A bicycle chain snapped. Two hundred metres.
+                A pigeon flew directly into a man's sandwich.
+            </p>
+
+            <p>
+                Daniel looked at Amelia.
+            </p>
+
+            <p>
+                She looked at him.
+            </p>
+
+            <div class="quote">
+                That's not my fault.
+            </div>
+
+            <p>
+                Daniel laughed.
+            </p>
+
+            <p>
+                But neither of them noticed the woman watching them from
+                across the street.
+            </p>
+
+            <p>
+                She had been there for several minutes. She wore a long grey
+                coat. In her hand was an old black notebook.
+            </p>
+
+            <p>
+                On the first page was written:
+            </p>
+
+            <div class="quote">
+                THE LUCK GIRL HAS BEEN FOUND.
+            </div>
+
+        </section>
+
+
+        <!-- CHAPTER 6 -->
+
+        <section class="chapter">
+
+            <div class="chapter-number">Chapter Six</div>
+
+            <h2>The Woman in the Grey Coat</h2>
+
+            <p>
+                The woman followed them for three days. She never approached.
+                She simply watched. Daniel noticed her on the fourth day. He
+                didn't tell Amelia immediately because Amelia had enough
+                problems without adding "mysterious woman following us" to her
+                growing collection of concerns.
+            </p>
+
+            <p>
+                Unfortunately, Amelia noticed her anyway.
+            </p>
+
+            <p>
+                "Daniel."
+            </p>
+
+            <p>
+                "Yes?"
+            </p>
+
+            <p>
+                "Do you know that woman?"
+            </p>
+
+            <p>
+                He looked. The woman was standing across the street.
+            </p>
+
+            <p>
+                "No."
+            </p>
+
+            <p>
+                "She's been looking at us."
+            </p>
+
+            <p>
+                "I know."
+            </p>
+
+            <p>
+                "You knew?"
+            </p>
+
+            <p>
+                "Yes."
+            </p>
+
+            <p>
+                "Why didn't you tell me?"
+            </p>
+
+            <p>
+                "I was going to."
+            </p>
+
+            <p>
+                "When?"
+            </p>
+
+            <p>
+                "Eventually."
+            </p>
+
+            <p>
+                "That's reassuring."
+            </p>
+
+            <p>
+                The woman turned and walked away.
+            </p>
+
+            <p>
+                Amelia looked at Daniel.
+            </p>
+
+            <p>
+                "Should we follow her?"
+            </p>
+
+            <p>
+                "No."
+            </p>
+
+            <p>
+                "Why?"
+            </p>
+
+            <p>
+                "Because that's exactly what someone wants us to do."
+            </p>
+
+            <p>
+                Amelia nodded.
+            </p>
+
+            <p>
+                "Good point."
+            </p>
+
+            <p>
+                She paused.
+            </p>
+
+            <p>
+                "Let's follow her."
+            </p>
+
+            <p>
+                Daniel sighed.
+            </p>
+
+            <p>
+                "Of course."
+            </p>
+
+            <p>
+                They followed.
+            </p>
+
+            <p>
+                The woman entered an old bookstore.
+            </p>
+
+            <p>
+                Daniel opened the door.
+            </p>
+
+            <p>
+                A bell rang.
+            </p>
+
+            <p>
+                Inside, thousands of books covered the walls. Amelia looked
+                around.
+            </p>
+
+            <div class="quote">
+                This place is beautiful.
+            </div>
+
+            <p>
+                Daniel nodded.
+            </p>
+
+            <p>
+                The woman was nowhere to be seen.
+            </p>
+
+            <p>
+                Then an old man appeared behind the counter. He looked at
+                them. Then at Amelia.
+            </p>
+
+            <p>
+                His face changed.
+            </p>
+
+            <div class="quote">
+                You.
+            </div>
+
+            <p>
+                Amelia pointed at herself.
+            </p>
+
+            <p>
+                "Me?"
+            </p>
+
+            <p>
+                The old man nodded.
+            </p>
+
+            <div class="quote">
+                You're the one.
+            </div>
+
+            <p>
+                Daniel stepped forward.
+            </p>
+
+            <p>
+                "The one what?"
+            </p>
+
+            <p>
+                The old man didn't answer. Instead, he reached beneath the
+                counter and pulled out a book. It was covered in dust.
+            </p>
+
+            <p>
+                The title was written in gold:
+            </p>
+
+            <h2 style="font-size: 2rem; margin: 35px 0;">
+                THE LEDGER OF FORTUNE
+            </h2>
+
+            <p>
+                He placed it in front of Amelia. She opened it. Every page was
+                blank. Until she touched it.
+            </p>
+
+            <p>
+                Words appeared.
+            </p>
+
+            <p>
+                Her name appeared first.
+            </p>
+
+            <div class="quote">
+                AMELIA HART.
+            </div>
+
+            <p>
+                Then another sentence appeared.
+            </p>
+
+            <div class="quote">
+                THE GIRL WHO CARRIES THE UNLUCKY THREAD.
+            </div>
+
+            <p>
+                Amelia swallowed.
+            </p>
+
+            <p>
+                Daniel leaned closer.
+            </p>
+
+            <p>
+                Another sentence appeared.
+            </p>
+
+            <div class="quote">
+                SHE WAS NOT BORN UNLUCKY.
+            </div>
+
+            <p>
+                Amelia stopped breathing.
+            </p>
+
+            <p>
+                Then the final words appeared.
+            </p>
+
+            <div class="quote">
+                SHE WAS MADE THAT WAY.
+            </div>
+
+            <p>
+                The bookstore became completely silent.
+            </p>
+
+        </section>
+
+
+        <!-- CHAPTER 7 -->
+
+        <section class="chapter">
+
+            <div class="chapter-number">Chapter Seven</div>
+
+            <h2>The Truth About Her Bad Luck</h2>
+
+            <p>
+                The old man explained everything slowly because, according to
+                him, some truths were too dangerous to deliver quickly. He
+                told Amelia that centuries ago there had been people who could
+                influence fortune.
+            </p>
+
+            <p>
+                Some could attract luck. Some could steal it. Some could
+                transfer it. And some could store it.
+            </p>
+
+            <p>
+                Amelia belonged to the last group.
+            </p>
+
+            <p>
+                Except she didn't know it.
+            </p>
+
+            <p>
+                Her family had been protecting a supernatural force called
+                the Fortune Thread, an invisible energy that connected people
+                to possibility itself.
+            </p>
+
+            <p>
+                Every person carried a tiny amount. Most people never noticed
+                it. But certain families could manipulate it.
+            </p>
+
+            <p>
+                Amelia's ancestors had been guardians.
+            </p>
+
+            <p>
+                Until someone betrayed them.
+            </p>
+
+            <p>
+                A woman named Celeste Vane had attempted to steal the Fortune
+                Thread for herself.
+            </p>
+
+            <p>
+                She failed.
+            </p>
+
+            <p>
+                Instead, she cursed Amelia's family. The curse transformed
+                fortune into misfortune.
+            </p>
+
+            <p>
+                And Amelia inherited it.
+            </p>
+
+            <p>
+                Daniel listened carefully.
+            </p>
+
+            <div class="quote">
+                So you're saying Amelia's bad luck is actually stolen fortune?
+            </div>
+
+            <p>
+                The old man nodded.
+            </p>
+
+            <p>
+                "Exactly."
+            </p>
+
+            <p>
+                Amelia looked offended.
+            </p>
+
+            <div class="quote">
+                Wait.
+            </div>
+
+            <p>
+                Everyone looked at her.
+            </p>
+
+            <p>
+                She pointed at herself.
+            </p>
+
+            <div class="quote">
+                So I've been suffering for twenty-two years because somebody
+                messed up a magical experiment?
+            </div>
+
+            <p>
+                The old man nodded.
+            </p>
+
+            <p>
+                "Yes."
+            </p>
+
+            <p>
+                She stared at him.
+            </p>
+
+            <div class="quote">
+                That is extremely rude.
+            </div>
+
+            <p>
+                Daniel covered his mouth.
+            </p>
+
+            <p>
+                The old man smiled.
+            </p>
+
+            <p>
+                "Unfortunately, yes."
+            </p>
+
+            <p>
+                Amelia crossed her arms.
+            </p>
+
+            <div class="quote">
+                I would like compensation.
+            </div>
+
+            <p>
+                Daniel laughed. The old man laughed too. Even Amelia
+                eventually smiled.
+            </p>
+
+            <p>
+                Then the old man became serious.
+            </p>
+
+            <p>
+                "But there is another problem."
+            </p>
+
+            <p>
+                "What?"
+            </p>
+
+            <p>
+                "The curse is getting stronger."
+            </p>
+
+            <p>
+                Amelia's smile disappeared.
+            </p>
+
+            <p>
+                "Why?"
+            </p>
+
+            <p>
+                "Because someone has begun stealing luck from other people."
+            </p>
+
+            <p>
+                Daniel's expression changed.
+            </p>
+
+            <div class="quote">
+                Celeste.
+            </div>
+
+            <p>
+                The old man nodded.
+            </p>
+
+            <div class="quote">
+                She's back.
+            </div>
+
+        </section>
+
+
+        <!-- CHAPTER 8 -->
+
+        <section class="chapter">
+
+            <div class="chapter-number">Chapter Eight</div>
+
+            <h2>The Worst Date in History</h2>
+
+            <p>
+                Daniel decided that Amelia needed one normal evening. This
+                was an admirable goal. It was also incredibly stupid.
+            </p>
+
+            <p>
+                He took her to a restaurant. He booked a table. He checked
+                the menu. He checked the weather. He checked the chairs. He
+                checked the floor.
+            </p>
+
+            <p>
+                Amelia watched him.
+            </p>
+
+            <div class="quote">
+                Are you inspecting the restaurant?
+            </div>
+
+            <p>
+                "Yes."
+            </p>
+
+            <p>
+                "Why?"
+            </p>
+
+            <p>
+                "I've learned."
+            </p>
+
+            <p>
+                She laughed.
+            </p>
+
+            <p>
+                Dinner began beautifully. The food was excellent. The music
+                was soft. The lights were warm. Amelia wore a dark green dress
+                that made her eyes look almost golden.
+            </p>
+
+            <p>
+                Daniel looked at her for a moment too long.
+            </p>
+
+            <p>
+                She noticed.
+            </p>
+
+            <div class="quote">
+                What?
+            </div>
+
+            <p>
+                "Nothing."
+            </p>
+
+            <p>
+                "You were staring."
+            </p>
+
+            <p>
+                "I was thinking."
+            </p>
+
+            <p>
+                "About?"
+            </p>
+
+            <p>
+                "You look beautiful."
+            </p>
+
+            <p>
+                Amelia smiled.
+            </p>
+
+            <div class="quote">
+                Thank you.
+            </div>
+
+            <p>
+                Daniel looked away.
+            </p>
+
+            <p>
+                Then a waiter approached.
+            </p>
+
+            <p>
+                "Would you like dessert?"
+            </p>
+
+            <p>
+                Amelia nodded.
+            </p>
+
+            <div class="quote">
+                Absolutely.
+            </div>
+
+            <p>
+                The waiter walked away.
+            </p>
+
+            <p>
+                Two minutes later, the restaurant lights went out.
+            </p>
+
+            <p>
+                Everyone screamed.
+            </p>
+
+            <p>
+                Emergency lights came on.
+            </p>
+
+            <p>
+                A waiter slipped.
+            </p>
+
+            <p>
+                A tray flew through the air.
+            </p>
+
+            <p>
+                Daniel caught it.
+            </p>
+
+            <p>
+                Amelia clapped.
+            </p>
+
+            <div class="quote">
+                Nice.
+            </div>
+
+            <p>
+                The lights came back.
+            </p>
+
+            <p>
+                The dessert arrived.
+            </p>
+
+            <p>
+                Amelia took one bite.
+            </p>
+
+            <p>
+                Her expression changed.
+            </p>
+
+            <div class="quote">
+                This is the best dessert I've ever had.
+            </div>
+
+            <p>
+                Then the chef ran out of the kitchen.
+            </p>
+
+            <p>
+                "Who ordered the chocolate cake?"
+            </p>
+
+            <p>
+                Amelia raised her hand.
+            </p>
+
+            <p>
+                The chef pointed at her.
+            </p>
+
+            <div class="quote">
+                Congratulations.
+            </div>
+
+            <p>
+                She blinked.
+            </p>
+
+            <div class="quote">
+                For what?
+            </div>
+
+            <p>
+                "You are our one-millionth customer."
+            </p>
+
+            <p>
+                The entire restaurant applauded.
+            </p>
+
+            <p>
+                Amelia stared. Daniel laughed.
+            </p>
+
+            <p>
+                She received a giant box of chocolates, an expensive bottle
+                of wine, a free meal voucher and a photograph.
+            </p>
+
+            <p>
+                She looked at Daniel.
+            </p>
+
+            <div class="quote">
+                Why is this happening?
+            </div>
+
+            <p>
+                He smiled.
+            </p>
+
+            <div class="quote">
+                Maybe your luck is changing.
+            </div>
+
+            <p>
+                She shook her head.
+            </p>
+
+            <div class="quote">
+                Maybe I'm borrowing yours.
+            </div>
+
+        </section>
+
+
+        <!-- CHAPTER 9 -->
+
+        <section class="chapter">
+
+            <div class="chapter-number">Chapter Nine</div>
+
+            <h2>The First Kiss</h2>
+
+            <p>
+                It happened in the rain. Of course it did.
+            </p>
+
+            <p>
+                Amelia and Daniel were standing beneath an old bridge after
+                escaping three men who had tried to steal the Fortune Ledger.
+                Amelia was breathing heavily. Daniel was soaked.
+            </p>
+
+            <p>
+                She looked at him.
+            </p>
+
+            <div class="quote">
+                You know... this is probably the strangest relationship I've
+                ever had.
+            </div>
+
+            <p>
+                Daniel smiled.
+            </p>
+
+            <div class="quote">
+                We're not in a relationship.
+            </div>
+
+            <p>
+                "I know."
+            </p>
+
+            <p>
+                She paused.
+            </p>
+
+            <div class="quote">
+                But you keep saving me.
+            </div>
+
+            <p>
+                "You keep getting into trouble."
+            </p>
+
+            <p>
+                "That's not my fault."
+            </p>
+
+            <p>
+                "Mostly."
+            </p>
+
+            <p>
+                She pushed him.
+            </p>
+
+            <p>
+                He laughed.
+            </p>
+
+            <p>
+                Then she became quiet.
+            </p>
+
+            <p>
+                Daniel noticed.
+            </p>
+
+            <div class="quote">
+                What?
+            </div>
+
+            <p>
+                She looked at him.
+            </p>
+
+            <div class="quote">
+                I've spent my whole life believing something was wrong with me.
+            </div>
+
+            <p>
+                He didn't interrupt.
+            </p>
+
+            <p>
+                She continued.
+            </p>
+
+            <p>
+                "I thought maybe I was careless. Maybe stupid. Maybe cursed.
+                Maybe the universe simply didn't like me. And now I find out
+                there was an actual reason."
+            </p>
+
+            <p>
+                Daniel stepped closer.
+            </p>
+
+            <div class="quote">
+                You were never the problem.
+            </div>
+
+            <p>
+                She looked at him.
+            </p>
+
+            <div class="quote">
+                How do you know?
+            </div>
+
+            <p>
+                "Because I've watched you. I mean I've watched how you treat
+                people. You help everyone, even when you have nothing. You
+                laugh when you're embarrassed. You apologize when something
+                isn't your fault. You pretend everything is fine when you're
+                scared."
+            </p>
+
+            <p>
+                She looked down.
+            </p>
+
+            <p>
+                Daniel gently lifted her chin.
+            </p>
+
+            <div class="quote">
+                And you're still standing.
+            </div>
+
+            <p>
+                Amelia's eyes softened.
+            </p>
+
+            <div class="quote">
+                Daniel...
+            </div>
+
+            <p>
+                He leaned closer.
+            </p>
+
+            <p>
+                For a second, neither moved.
+            </p>
+
+            <p>
+                Then Amelia whispered:
+            </p>
+
+            <div class="quote">
+                If you kiss me and something explodes, I'm blaming you.
+            </div>
+
+            <p>
+                Daniel smiled.
+            </p>
+
+            <div class="quote">
+                Fair.
+            </div>
+
+            <p>
+                He kissed her.
+            </p>
+
+            <p>
+                Nothing exploded.
+            </p>
+
+            <p>
+                No glass shattered. No car crashed. No bird attacked anyone.
+                Nothing.
+            </p>
+
+            <p>
+                For the first time in Amelia's entire life, something
+                beautiful happened without being followed by disaster.
+            </p>
+
+            <p>
+                She smiled against his lips.
+            </p>
+
+            <p>
+                Then somewhere in the distance, a car alarm started screaming.
+            </p>
+
+            <p>
+                Amelia pulled away.
+            </p>
+
+            <p>
+                Daniel laughed.
+            </p>
+
+            <p>
+                She pointed at him.
+            </p>
+
+            <div class="quote">
+                Don't say anything.
+            </div>
+
+            <p>
+                "I wasn't going to."
+            </p>
+
+            <p>
+                "You were."
+            </p>
+
+            <p>
+                "I was."
+            </p>
+
+            <p>
+                She smiled.
+            </p>
+
+            <p>
+                And they kissed again.
+            </p>
+
+        </section>
+
+
+        <!-- CHAPTER 10 -->
+
+        <section class="chapter" id="chapter10">
+
+            <div class="chapter-number">Chapter Ten</div>
+
+            <h2>The Woman Who Steals Luck</h2>
+
+            <p>
+                Celeste Vane was not a monster. That was what made her
+                frightening. She looked completely human. She had silver hair,
+                pale skin and calm green eyes. She dressed elegantly. She
+                spoke softly. She smiled politely.
+            </p>
+
+            <p>
+                And she could walk into a room, shake someone's hand and
+                steal ten years of their good fortune without them ever
+                knowing.
+            </p>
+
+            <p>
+                She didn't steal money. She stole opportunities. A promotion.
+                A successful surgery. A safe journey. A lucky meeting. A
+                chance encounter.
+            </p>
+
+            <p>
+                She collected them.
+            </p>
+
+            <p>
+                And every stolen piece of fortune made her stronger.
+            </p>
+
+            <p>
+                Now she wanted Amelia.
+            </p>
+
+            <p>
+                Not because Amelia was powerful. Because Amelia was the last
+                remaining vessel capable of holding the entire Fortune Thread.
+            </p>
+
+            <p>
+                Celeste needed Amelia alive.
+            </p>
+
+            <p>
+                But she didn't need Daniel alive.
+            </p>
+
+            <p>
+                That was the problem.
+            </p>
+
+        </section>
+
+
+        <!-- CHAPTER 11 -->
+
+        <section class="chapter">
+
+            <div class="chapter-number">Chapter Eleven</div>
+
+            <h2>Amelia Learns to Use Her Bad Luck</h2>
+
+            <p>
+                Daniel taught Amelia something important. Her bad luck wasn't
+                completely random. It followed patterns.
+            </p>
+
+            <p>
+                If she concentrated, she could influence it.
+            </p>
+
+            <p>
+                At first she accidentally caused small disasters. A spoon
+                fell. A chair broke. A shoe came loose. A door slammed.
+            </p>
+
+            <p>
+                Then she became better.
+            </p>
+
+            <p>
+                She could make a coin land strangely. She could cause an
+                opponent to trip. She could make a weapon jam. She could turn
+                someone's perfect plan into absolute chaos.
+            </p>
+
+            <p>
+                Amelia discovered something wonderful.
+            </p>
+
+            <div class="quote">
+                Her bad luck could be weaponized.
+            </div>
+
+            <p>
+                She smiled.
+            </p>
+
+            <p>
+                Daniel looked worried.
+            </p>
+
+            <div class="quote">
+                That expression concerns me.
+            </div>
+
+            <p>
+                "Why?"
+            </p>
+            <p>
+                "You look happy."
+            </p>
+
+            <p>
+                "I am."
+            </p>
+
+            <p>
+                "That's worse."
+            </p>
+
+            <p>
+                Amelia raised her hand.
+            </p>
+
+            <p>
+                A villain's shoe suddenly flew off.
+            </p>
+
+            <p>
+                He fell.
+            </p>
+
+            <p>
+                Daniel stared.
+            </p>
+
+            <p>
+                Amelia smiled.
+            </p>
+
+            <div class="quote">
+                See?
+            </div>
+
+            <p>
+                Daniel shook his head.
+            </p>
+
+            <div class="quote">
+                That's terrifying.
+            </div>
+
+            <p>
+                Amelia smiled wider.
+            </p>
+
+            <div class="quote">
+                Thank you.
+            </div>
+
+        </section>
+
+
+        <!-- CHAPTER 12 -->
+
+        <section class="chapter">
+
+            <div class="chapter-number">Chapter Twelve</div>
+
+            <h2>The Lucky Bank</h2>
+
+            <p>
+                They discovered a hidden building beneath London. It was
+                called the Lucky Bank.
+            </p>
+
+            <p>
+                It contained millions of bottled fortunes.
+            </p>
+
+            <p>
+                One bottle contained someone's chance of meeting the love of
+                their life. Another contained someone's chance of becoming
+                wealthy. Another contained someone's chance of surviving an
+                accident.
+            </p>
+
+            <p>
+                Amelia stared at the shelves.
+            </p>
+
+            <div class="quote">
+                This is horrible.
+            </div>
+
+            <p>
+                Daniel nodded.
+            </p>
+
+            <div class="quote">
+                Yes.
+            </div>
+
+            <p>
+                "Why would anyone collect these?"
+            </p>
+
+            <p>
+                The old librarian answered:
+            </p>
+
+            <div class="quote">
+                Because people always want what someone else has.
+            </div>
+
+            <p>
+                Amelia looked at the bottles.
+            </p>
+
+            <p>
+                Then she noticed one labelled:
+            </p>
+
+            <h2 style="font-size: 2rem; margin: 35px 0;">
+                AMELIA HART — UNUSED FORTUNE
+            </h2>
+
+            <p>
+                She froze.
+            </p>
+
+            <p>
+                Daniel saw it.
+            </p>
+
+            <div class="quote">
+                What is that?
+            </div>
+
+            <p>
+                Amelia reached toward it.
+            </p>
+
+            <p>
+                The bottle cracked.
+            </p>
+
+            <p>
+                Golden light escaped.
+            </p>
+
+            <p>
+                Every light in the building turned on.
+            </p>
+
+            <p>
+                The ground shook.
+            </p>
+
+            <p>
+                And somewhere far away, Celeste screamed.
+            </p>
+
+        </section>
+
+
+        <!-- CHAPTER 13 -->
+
+        <section class="chapter">
+
+            <div class="chapter-number">Chapter Thirteen</div>
+
+            <h2>The Chase</h2>
+
+            <p>
+                They ran. There were people chasing them. There were magical
+                creatures chasing them. There was a man on a motorcycle
+                chasing them. And, for reasons Amelia never understood, there
+                was also a goat.
+            </p>
+
+            <p>
+                "Why is there a goat?"
+            </p>
+
+            <p>
+                Daniel shouted:
+            </p>
+
+            <div class="quote">
+                Don't worry about the goat!
+            </div>
+
+            <p>
+                "THE GOAT IS CHASING US!"
+            </p>
+
+            <p>
+                "KEEP RUNNING!"
+            </p>
+
+            <p>
+                The goat ran faster.
+            </p>
+
+            <p>
+                Amelia looked behind her.
+            </p>
+
+            <div class="quote">
+                I THINK IT'S ANGRY!
+            </div>
+
+            <p>
+                Daniel shouted:
+            </p>
+
+            <div class="quote">
+                YOU PROBABLY STOLE ITS LUCK!
+            </div>
+
+            <p>
+                "WHY WOULD I STEAL A GOAT'S LUCK?"
+            </p>
+
+            <p>
+                "WE DON'T HAVE TIME!"
+            </p>
+
+            <p>
+                They turned a corner. The goat hit a trash bin. The bin
+                exploded.
+            </p>
+
+            <p>
+                Amelia screamed.
+            </p>
+
+            <p>
+                Daniel laughed.
+            </p>
+
+            <div class="quote">
+                This isn't funny!
+            </div>
+
+            <p>
+                "It absolutely is!"
+            </p>
+
+            <p>
+                They escaped through a train station. Amelia jumped onto a
+                train. Daniel followed. The doors closed.
+            </p>
+
+            <p>
+                The goat remained on the platform.
+            </p>
+
+            <p>
+                It stared at them.
+            </p>
+
+            <p>
+                Amelia stared back.
+            </p>
+
+            <p>
+                The goat stared.
+            </p>
+
+            <p>
+                Amelia raised one finger.
+            </p>
+
+            <div class="quote">
+                Don't.
+            </div>
+
+            <p>
+                The goat bleated.
+            </p>
+
+            <p>
+                The train moved.
+            </p>
+
+            <p>
+                Daniel sat down.
+            </p>
+
+            <div class="quote">
+                I'm going to miss that goat.
+            </div>
+
+            <p>
+                Amelia looked at him.
+            </p>
+
+            <div class="quote">
+                You are deeply strange.
+            </div>
+
+            <p>
+                "I've been told."
+            </p>
+
+        </section>
+
+
+        <!-- CHAPTER 14 -->
+
+        <section class="chapter">
+
+            <div class="chapter-number">Chapter Fourteen</div>
+
+            <h2>The House of Impossible Things</h2>
+
+            <p>
+                Their journey took them to a house that existed in two places
+                at once. From outside, it looked ordinary. Inside, it was
+                enormous.
+            </p>
+
+            <p>
+                There were stairs that led nowhere. Doors that opened into
+                yesterday. Windows that showed tomorrow. A kitchen where the
+                cupboards occasionally complained.
+            </p>
+
+            <p>
+                A bedroom changed its location every morning.
+            </p>
+
+            <p>
+                Amelia loved it.
+            </p>
+
+            <p>
+                Daniel hated it.
+            </p>
+
+            <p>
+                One morning Amelia opened the refrigerator.
+            </p>
+
+            <p>
+                A tiny man inside shouted:
+            </p>
+
+            <div class="quote">
+                Close the door!
+            </div>
+
+            <p>
+                She screamed.
+            </p>
+
+            <p>
+                Daniel ran into the room.
+            </p>
+
+            <div class="quote">
+                What happened?
+            </div>
+
+            <p>
+                "The refrigerator yelled at me!"
+            </p>
+
+            <p>
+                The tiny man shouted:
+            </p>
+
+            <div class="quote">
+                It's cold!
+            </div>
+
+            <p>
+                Daniel stared.
+            </p>
+
+            <div class="quote">
+                Why is there a man in the refrigerator?
+            </div>
+
+            <p>
+                The tiny man looked offended.
+            </p>
+
+            <div class="quote">
+                Why aren't you?
+            </div>
+
+            <p>
+                Amelia laughed so hard she had to sit down.
+            </p>
+
+            <p>
+                For the first time, Daniel realized something. He had fallen
+                in love with her.
+            </p>
+
+            <p>
+                Not because she was magical. Not because she was unlucky. Not
+                because she was connected to the Fortune Thread.
+            </p>
+
+            <p>
+                He loved her because she could walk into an impossible house,
+                meet a tiny angry refrigerator man and somehow make the
+                situation seem completely normal.
+            </p>
+
+        </section>
+
+
+        <!-- CHAPTER 15 -->
+
+        <section class="chapter">
+
+            <div class="chapter-number">Chapter Fifteen</div>
+
+            <h2>The First Great Disaster</h2>
+
+            <p>
+                Celeste attacked at midnight.
+            </p>
+
+            <p>
+                The house shook.
+            </p>
+
+            <p>
+                Windows shattered.
+            </p>
+
+            <p>
+                Doors slammed.
+            </p>
+
+            <p>
+                The Fortune Thread screamed through the walls.
+            </p>
+
+            <p>
+                Amelia stood in the centre of the living room.
+            </p>
+
+            <p>
+                Daniel stood beside her.
+            </p>
+
+            <p>
+                Celeste appeared at the doorway.
+            </p>
+
+            <div class="quote">
+                Give me the Thread.
+            </div>
+
+            <p>
+                Amelia shook her head.
+            </p>
+
+            <div class="quote">
+                No.
+            </div>
+
+            <p>
+                Celeste smiled.
+            </p>
+
+            <div class="quote">
+                You don't understand what you carry.
+            </div>
+
+            <p>
+                Amelia raised her hands.
+            </p>
+
+            <div class="quote">
+                You're right.
+            </div>
+
+            <p>
+                She smiled.
+            </p>
+
+            <div class="quote">
+                But I'm learning.
+            </div>
+
+            <p>
+                The lights exploded.
+            </p>
+
+            <p>
+                The battle began.
+            </p>
+
+            <p>
+                Amelia discovered that her bad luck could affect magic itself.
+                Spells missed. Weapons broke. Floors collapsed beneath
+                enemies. One attacker slipped on absolutely nothing and fell
+                into a bathtub.
+            </p>
+
+            <p>
+                Daniel stared.
+            </p>
+
+            <div class="quote">
+                How did you do that?
+            </div>
+
+            <p>
+                Amelia smiled.
+            </p>
+
+            <div class="quote">
+                I don't know.
+            </div>
+
+            <p>
+                Then she looked at Celeste.
+            </p>
+
+            <div class="quote">
+                But I think I'm getting good at this.
+            </div>
+
+        </section>
+
+
+        <!-- CHAPTER 16 -->
+
+        <section class="chapter">
+
+            <div class="chapter-number">Chapter Sixteen</div>
+
+            <h2>The Secret of Daniel's Power</h2>
+
+            <p>
+                Daniel finally admitted the truth. His luck wasn't his own.
+                He had inherited it from his mother. She had been one of the
+                last Luck Benders.
+            </p>
+
+            <p>
+                But unlike Amelia, Daniel could consciously control
+                probability.
+            </p>
+
+            <p>
+                The reason Amelia's bad luck disappeared around him was
+                because her curse and his power reacted naturally.
+            </p>
+
+            <p>
+                His fortune balanced her misfortune.
+            </p>
+
+            <p>
+                They were opposites.
+            </p>
+
+            <p>
+                Together, they created something rare.
+            </p>
+
+            <div class="quote">
+                Balance.
+            </div>
+
+            <p>
+                The old librarian called them:
+            </p>
+
+            <div class="quote">
+                The Lucky Pair.
+            </div>
+
+            <p>
+                Amelia hated the name.
+            </p>
+
+            <p>
+                Daniel loved it.
+            </p>
+
+            <p>
+                She told him it sounded like a children's cartoon. He said it
+                could have merchandise. She said she would never wear the
+                T-shirt. He said he would buy her one. She said she would
+                burn it.
+            </p>
+
+            <p>
+                He smiled.
+            </p>
+
+            <div class="quote">
+                Romantic.
+            </div>
+
+            <p>
+                She laughed.
+            </p>
+
+        </section>
+
+
+        <!-- CHAPTER 17 -->
+
+        <section class="chapter">
+
+            <div class="chapter-number">Chapter Seventeen</div>
+
+            <h2>The Day Amelia Became Famous</h2>
+
+            <p>
+                Someone filmed Amelia using her powers.
+            </p>
+
+            <p>
+                The video went viral.
+            </p>
+
+            <p>
+                She accidentally became famous.
+            </p>
+
+            <p>
+                People called her The Luck Girl. The Curse Queen. The Walking
+                Disaster.
+            </p>
+
+            <p>
+                One person called her Susan.
+            </p>
+
+            <p>
+                Amelia was furious about Susan.
+            </p>
+
+            <div class="quote">
+                Who is Susan?
+            </div>
+
+            <p>
+                Daniel shrugged.
+            </p>
+
+            <div class="quote">
+                Maybe someone thought you looked like Susan.
+            </div>
+
+            <p>
+                "I don't."
+            </p>
+
+            <p>
+                "I agree."
+            </p>
+
+            <p>
+                "Thank you."
+            </p>
+
+            <p>
+                The internet became obsessed. People sent her gifts. Someone
+                sent her a lucky rabbit's foot. Amelia sent it back. Someone
+                sent her a four-leaf clover. She accidentally killed it.
+                Someone sent her a horseshoe. It fell off the wall and hit
+                Daniel.
+            </p>
+
+            <p>
+                He blamed her.
+            </p>
+
+            <p>
+                She laughed.
+            </p>
+
+        </section>
+
+
+        <!-- CHAPTER 18 -->
+
+        <section class="chapter">
+
+            <div class="chapter-number">Chapter Eighteen</div>
+
+            <h2>The Worst Family Dinner</h2>
+
+            <p>
+                Daniel met Amelia's family.
+            </p>
+
+            <p>
+                It went badly.
+            </p>
+
+            <p>
+                Her mother liked him. Her father interrogated him. Her
+                younger brother stole his wallet. Her grandmother asked when
+                they were getting married.
+            </p>
+
+            <p>
+                Amelia nearly choked.
+            </p>
+
+            <p>
+                Daniel smiled.
+            </p>
+
+            <p>
+                Her grandmother nodded approvingly.
+            </p>
+
+            <p>
+                Then the dinner table collapsed.
+            </p>
+
+            <p>
+                Everyone stared.
+            </p>
+
+            <p>
+                Amelia sighed.
+            </p>
+
+            <div class="quote">
+                Welcome to the family.
+            </div>
+
+            <p>
+                Daniel laughed.
+            </p>
+
+            <div class="quote">
+                I think I'm staying.
+            </div>
+
+        </section>
+
+
+        <!-- CHAPTER 19 -->
+
+        <section class="chapter">
+
+            <div class="chapter-number">Chapter Nineteen</div>
+
+            <h2>The Lucky Festival</h2>
+
+            <p>
+                Every hundred years, people with supernatural abilities
+                gathered for the Festival of Fortune.
+            </p>
+
+            <p>
+                There were magic competitions, flying races, probability
+                games, strength contests and a cooking competition.
+            </p>
+
+            <p>
+                Amelia entered the cooking competition.
+            </p>
+
+            <p>
+                She burned water.
+            </p>
+
+            <p>
+                The judges stared.
+            </p>
+
+            <p>
+                Amelia stared at the pot.
+            </p>
+
+            <div class="quote">
+                I don't understand.
+            </div>
+
+            <p>
+                Daniel whispered:
+            </p>
+
+            <div class="quote">
+                You somehow managed to make water dangerous.
+            </div>
+
+            <p>
+                She shrugged.
+            </p>
+
+            <div class="quote">
+                Talent.
+            </div>
+
+            <p>
+                She accidentally won.
+            </p>
+
+            <p>
+                The judges declared her dish "conceptual."
+            </p>
+
+            <p>
+                Amelia received a gold medal.
+            </p>
+
+            <p>
+                She had no idea why.
+            </p>
+
+        </section>
+
+
+        <!-- CHAPTER 20 -->
+
+        <section class="chapter">
+
+            <div class="chapter-number">Chapter Twenty</div>
+
+            <h2>The Day Everything Stopped</h2>
+
+            <p>
+                Then Amelia woke up without bad luck.
+            </p>
+
+            <p>
+                At first she was happy.
+            </p>
+
+            <p>
+                Then she became frightened.
+            </p>
+
+            <p>
+                Nothing went wrong.
+            </p>
+
+            <p>
+                Nothing broke.
+            </p>
+
+            <p>
+                Nothing fell.
+            </p>
+
+            <p>
+                Nothing exploded.
+            </p>
+
+            <p>
+                She walked outside.
+            </p>
+
+            <p>
+                A bird landed on her shoulder.
+            </p>
+
+            <p>
+                She looked at it.
+            </p>
+
+            <p>
+                It didn't attack her.
+            </p>
+
+            <p>
+                Daniel arrived.
+            </p>
+
+            <p>
+                "Morning."
+            </p>
+
+            <p>
+                She smiled.
+            </p>
+
+            <div class="quote">
+                Morning.
+            </div>
+
+            <p>
+                He hugged her.
+            </p>
+
+            <p>
+                Nothing happened.
+            </p>
+
+            <p>
+                Then Amelia whispered:
+            </p>
+
+            <div class="quote">
+                Something's wrong.
+            </div>
+
+            <p>
+                Daniel frowned.
+            </p>
+
+            <div class="quote">
+                Why?
+            </div>
+
+            <p>
+                She looked at him.
+            </p>
+
+            <div class="quote">
+                My bad luck is gone.
+            </div>
+
+            <p>
+                His expression changed.
+            </p>
+
+            <p>
+                Because he knew what that meant.
+            </p>
+
+            <p>
+                Someone had taken it.
+            </p>
+
+            <p>
+                And if Amelia no longer carried the curse...
+            </p>
+
+            <p>
+                someone else did.
+            </p>
+
+        </section>
+
+
+        <!-- CHAPTER 21 -->
+
+        <section class="chapter">
+
+            <div class="chapter-number">Chapter Twenty-One</div>
+
+            <h2>The Curse Has a New Owner</h2>
+
+            <p>
+                They found the answer in the old book.
+            </p>
+
+            <p>
+                The curse had moved into Celeste.
+            </p>
+
+            <p>
+                For the first time, Celeste experienced the misfortune she had
+                spent centuries stealing from others.
+            </p>
+
+            <p>
+                Her spells failed.
+            </p>
+
+            <p>
+                Her plans collapsed.
+            </p>
+
+            <p>
+                Her armies turned against her.
+            </p>
+
+            <p>
+                Her portals opened into bathrooms.
+            </p>
+
+            <p>
+                Her magical weapons exploded.
+            </p>
+
+            <p>
+                Her shoes disappeared.
+            </p>
+
+            <p>
+                She was furious.
+            </p>
+
+            <p>
+                Amelia watched from a distance.
+            </p>
+
+            <p>
+                Daniel asked:
+            </p>
+
+            <div class="quote">
+                Do you feel sorry for her?
+            </div>
+
+            <p>
+                Amelia thought about it.
+            </p>
+
+            <div class="quote">
+                No.
+            </div>
+
+            <p>
+                Daniel nodded.
+            </p>
+
+            <div class="quote">
+                Fair.
+            </div>
+
+        </section>
+
+
+        <!-- CHAPTER 22 -->
+
+        <section class="chapter">
+
+            <div class="chapter-number">Chapter Twenty-Two</div>
+
+            <h2>Amelia's Choice</h2>
+
+            <p>
+                The Fortune Thread could be destroyed.
+            </p>
+
+            <p>
+                If Amelia destroyed it, supernatural luck would disappear
+                from the world.
+            </p>
+
+            <p>
+                No more Luck Benders. No more curses. No more stolen fortune.
+                No more magical disasters.
+            </p>
+
+            <p>
+                But there would also be no more Daniel's power.
+            </p>
+
+            <p>
+                Amelia had to choose.
+            </p>
+
+            <p>
+                She stood beside the ancient Thread. Daniel stood behind her.
+            </p>
+
+            <div class="quote">
+                If you destroy it, I'll lose everything.
+            </div>
+
+            <p>
+                Amelia turned.
+            </p>
+
+            <div class="quote">
+                I'm sorry.
+            </div>
+
+            <p>
+                He smiled.
+            </p>
+
+            <div class="quote">
+                You don't have to apologize.
+            </div>
+
+            <p>
+                She stared at him.
+            </p>
+
+            <div class="quote">
+                Why?
+            </div>
+
+            <p>
+                "Because I would rather live an ordinary life with you than a
+                magical life without you."
+            </p>
+
+            <p>
+                Amelia's eyes filled with tears.
+            </p>
+
+            <p>
+                Then she smiled.
+            </p>
+
+            <div class="quote">
+                You really are annoyingly good at saying things.
+            </div>
+
+            <p>
+                "I practice."
+            </p>
+
+            <p>
+                She laughed.
+            </p>
+
+            <p>
+                Then she made her decision.
+            </p>
+
+        </section>
+
+
+        <!-- CHAPTER 23 -->
+
+        <section class="chapter">
+
+            <div class="chapter-number">Chapter Twenty-Three</div>
+
+            <h2>The Thread</h2>
+
+            <p>
+                Amelia touched the Fortune Thread.
+            </p>
+
+            <p>
+                The world went silent.
+            </p>
+
+            <p>
+                Every magical person felt it. Every creature. Every hidden
+                society. Every supernatural being.
+            </p>
+
+            <p>
+                Everything stopped.
+            </p>
+
+            <p>
+                Amelia closed her eyes.
+            </p>
+
+            <p>
+                She didn't destroy the Thread.
+            </p>
+
+            <p>
+                She changed it.
+            </p>
+
+            <p>
+                Instead of belonging to one person, it would belong to
+                everyone.
+            </p>
+
+            <p>
+                No one could steal it. No one could own it. No one could
+                control it completely.
+            </p>
+
+            <p>
+                Luck became balance.
+            </p>
+
+            <p>
+                Misfortune became possibility.
+            </p>
+
+            <p>
+                And Amelia's curse disappeared.
+            </p>
+
+            <p>
+                For the first time in her life, she was free.
+            </p>
+
+        </section>
+
+
+        <!-- CHAPTER 24 -->
+
+        <section class="chapter">
+
+            <div class="chapter-number">Chapter Twenty-Four</div>
+
+            <h2>An Ordinary Morning</h2>
+
+            <p>
+                Amelia woke up.
+            </p>
+
+            <p>
+                She opened her eyes.
+            </p>
+
+            <p>
+                Her phone worked.
+            </p>
+
+            <p>
+                Her toothbrush was where she left it.
+            </p>
+
+            <p>
+                Her shoes were dry.
+            </p>
+
+            <p>
+                Her breakfast didn't fall.
+            </p>
+
+            <p>
+                She walked outside.
+            </p>
+
+            <p>
+                Nothing happened.
+            </p>
+
+            <p>
+                She reached the bus stop.
+            </p>
+
+            <p>
+                The bus arrived.
+            </p>
+
+            <p>
+                She got on.
+            </p>
+
+            <p>
+                She sat down.
+            </p>
+
+            <p>
+                A man dropped his newspaper.
+            </p>
+
+            <p>
+                A child laughed.
+            </p>
+
+            <p>
+                A dog barked.
+            </p>
+
+            <p>
+                A woman smiled.
+            </p>
+
+            <p>
+                The world continued.
+            </p>
+
+            <p>
+                Amelia looked around.
+            </p>
+
+            <p>
+                She expected disaster.
+            </p>
+
+            <p>
+                None came.
+            </p>
+
+            <p>
+                Daniel sat beside her.
+            </p>
+
+            <p>
+                "How does it feel?"
+            </p>
+
+            <p>
+                She smiled.
+            </p>
+
+            <div class="quote">
+                Strange.
+            </div>
+
+            <p>
+                "Good strange?"
+            </p>
+
+            <div class="quote">
+                Very.
+            </div>
+
+            <p>
+                He took her hand.
+            </p>
+
+            <p>
+                She squeezed his fingers.
+            </p>
+
+            <p>
+                For once, Amelia didn't have to prepare for something to go
+                wrong.
+            </p>
+
+        </section>
+
+
+        <!-- CHAPTER 25 -->
+
+        <section class="chapter">
+
+            <div class="chapter-number">Chapter Twenty-Five</div>
+
+            <h2>But Luck Is Funny</h2>
+
+            <p>
+                Three weeks later, Amelia won a holiday.
+            </p>
+
+            <p>
+                She stared at the ticket.
+            </p>
+
+            <p>
+                Daniel stared at the ticket.
+            </p>
+
+            <div class="quote">
+                Congratulations.
+            </div>
+
+            <p>
+                "Thank you."
+            </p>
+
+            <p>
+                "Where are we going?"
+            </p>
+
+            <p>
+                She looked at the destination.
+            </p>
+
+            <div class="quote">
+                Paris.
+            </div>
+
+            <p>
+                Daniel smiled.
+            </p>
+
+            <div class="quote">
+                Wonderful.
+            </div>
+
+            <p>
+                She smiled.
+            </p>
+
+            <p>
+                Then the ticket printer exploded.
+            </p>
+
+            <p>
+                They stared at it.
+            </p>
+
+            <p>
+                Amelia slowly turned toward Daniel.
+            </p>
+
+            <p>
+                He laughed.
+            </p>
+
+            <div class="quote">
+                Don't worry.
+            </div>
+
+            <p>
+                She smiled.
+            </p>
+
+            <div class="quote">
+                Maybe a little bit of bad luck survived.
+            </div>
+
+            <p>
+                "Maybe."
+            </p>
+
+            <p>
+                She took his hand.
+            </p>
+
+            <div class="quote">
+                Good.
+            </div>
+
+            <p>
+                He looked surprised.
+            </p>
+
+            <div class="quote">
+                Good?
+            </div>
+
+            <p>
+                She nodded.
+            </p>
+
+            <div class="quote">
+                I think I missed it.
+            </div>
+
+        </section>
+
+
+        <!-- CHAPTER 26 -->
+
+        <section class="chapter">
+
+            <div class="chapter-number">Chapter Twenty-Six</div>
+
+            <h2>The Wedding That Almost Didn't Happen</h2>
+
+            <p>
+                Years later, Daniel proposed.
+            </p>
+
+            <p>
+                He planned everything perfectly. The restaurant. The flowers.
+                The music. The ring. The speech.
+            </p>
+
+            <p>
+                Everything.
+            </p>
+
+            <p>
+                Except the weather.
+            </p>
+
+            <p>
+                A storm arrived.
+            </p>
+
+            <p>
+                The restaurant lost power.
+            </p>
+
+            <p>
+                The flowers were delivered to the wrong address.
+            </p>
+
+            <p>
+                The musician broke his guitar string.
+            </p>
+
+            <p>
+                The cake fell over.
+            </p>
+
+            <p>
+                Daniel stood in the middle of the chaos.
+            </p>
+
+            <p>
+                Amelia laughed.
+            </p>
+
+            <p>
+                He looked at her.
+            </p>
+
+            <div class="quote">
+                You're enjoying this.
+            </div>
+
+            <p>
+                She nodded.
+            </p>
+
+            <div class="quote">
+                Very much.
+            </div>
+
+            <p>
+                He took her hand.
+            </p>
+
+            <div class="quote">
+                Will you marry me?
+            </div>
+
+            <p>
+                She smiled.
+            </p>
+
+            <div class="quote">
+                Yes.
+            </div>
+
+            <p>
+                Thunder exploded outside.
+            </p>
+
+            <p>
+                The lights returned.
+            </p>
+
+            <p>
+                The musician's guitar suddenly worked.
+            </p>
+
+            <p>
+                The cake somehow stood upright.
+            </p>
+
+            <p>
+                Daniel stared.
+            </p>
+
+            <p>
+                Amelia laughed.
+            </p>
+
+            <div class="quote">
+                See?
+            </div>
+
+            <p>
+                "What?"
+            </p>
+
+            <p>
+                She smiled.
+            </p>
+
+            <div class="quote">
+                You still have some luck.
+            </div>
+
+            <p>
+                He smiled.
+            </p>
+
+            <div class="quote">
+                Apparently.
+            </div>
+
+        </section>
+
+
+        <!-- CHAPTER 27 -->
+
+        <section class="chapter">
+
+            <div class="chapter-number">Chapter Twenty-Seven</div>
+
+            <h2>Amelia Hart, Lucky at Last</h2>
+
+            <p>
+                Amelia eventually became a writer.
+            </p>
+
+            <p>
+                Naturally, she wrote about everything that happened.
+            </p>
+
+            <p>
+                She changed some names. Changed some details. Changed the goat
+                completely.
+            </p>
+
+            <p>
+                Daniel complained.
+            </p>
+
+            <div class="quote">
+                The goat was important.
+            </div>
+
+            <p>
+                "The goat was insane."
+            </p>
+
+            <div class="quote">
+                The goat had character.
+            </div>
+
+            <p>
+                "The goat tried to kill me."
+            </p>
+
+            <div class="quote">
+                It was misunderstood.
+            </div>
+
+            <p>
+                Amelia laughed.
+            </p>
+
+            <p>
+                She wrote for hours. Sometimes Daniel would sit beside her.
+                Sometimes they would drink coffee. Sometimes they would argue
+                about fictional characters.
+            </p>
+
+            <p>
+                Sometimes Amelia would stare at the page for an hour without
+                writing a word.
+            </p>
+
+            <p>
+                Daniel would ask:
+            </p>
+
+            <div class="quote">
+                Writer's block?
+            </div>
+
+            <p>
+                She would nod.
+            </p>
+
+            <p>
+                Then he would say:
+            </p>
+
+            <div class="quote">
+                Want me to throw a shoe at you?
+            </div>
+
+            <p>
+                She would laugh.
+            </p>
+
+            <p>
+                And suddenly the words would return.
+            </p>
+
+        </section>
+
+
+        <!-- CHAPTER 28 -->
+
+        <section class="chapter">
+
+            <div class="chapter-number">Chapter Twenty-Eight</div>
+
+            <h2>The Last Letter</h2>
+
+            <p>
+                Years later, Amelia received a letter.
+            </p>
+
+            <p>
+                It was written in silver ink.
+            </p>
+
+            <p>
+                There was no address. No stamp. No name.
+            </p>
+
+            <p>
+                Only one sentence:
+            </p>
+
+            <div class="quote">
+                THE FORTUNE THREAD REMEMBERS YOU.
+            </div>
+
+            <p>
+                Amelia read it twice.
+            </p>
+
+            <p>
+                Then she looked at Daniel.
+            </p>
+
+            <div class="quote">
+                Do you think it's starting again?
+            </div>
+
+            <p>
+                Daniel took the letter.
+            </p>
+
+            <p>
+                He read it.
+            </p>
+
+            <p>
+                He looked at her.
+            </p>
+
+            <div class="quote">
+                I don't know.
+            </div>
+
+            <p>
+                She smiled.
+            </p>
+
+            <div class="quote">
+                Good.
+            </div>
+
+            <p>
+                He raised an eyebrow.
+            </p>
+
+            <div class="quote">
+                Good?
+            </div>
+
+            <p>
+                She nodded.
+            </p>
+
+            <div class="quote">
+                Because if everything were finally normal, we'd probably get bored.
+            </div>
+
+            <p>
+                Daniel laughed.
+            </p>
+
+            <div class="quote">
+                That's the woman I married.
+            </div>
+
+            <p>
+                She leaned against him.
+            </p>
+
+            <div class="quote">
+                And you love me.
+            </div>
+
+            <p>
+                "Unfortunately."
+            </p>
+
+            <p>
+                She punched his arm.
+            </p>
+
+            <p>
+                He laughed.
+            </p>
+
+        </section>
+
+
+        <!-- CHAPTER 29 -->
+
+        <section class="chapter">
+
+            <div class="chapter-number">Chapter Twenty-Nine</div>
+
+            <h2>The Girl Who Changed Her Luck</h2>
+
+            <p>
+                Amelia eventually understood something. She had spent most
+                of her life believing that luck determined everything.
+            </p>
+
+            <p>
+                She believed good luck meant happiness. She believed bad luck
+                meant failure. She believed unlucky people were somehow less
+                deserving of good things.
+            </p>
+
+            <p>
+                But she had learned something more important.
+            </p>
+
+            <p>
+                Luck was only possibility.
+            </p>
+
+            <p>
+                It wasn't destiny.
+            </p>
+
+            <p>
+                A person could lose everything and still choose to stand. A
+                person could have everything and still be miserable. A person
+                could have terrible luck and still make somebody laugh.
+            </p>
+
+            <p>
+                A person could fall a hundred times and still get up.
+            </p>
+
+            <p>
+                Amelia had fallen more than anyone she knew.
+            </p>
+
+            <p>
+                She had broken phones. Destroyed shoes. Lost umbrellas. Been
+                attacked by birds. Fought a magical goat. Accidentally won
+                competitions. Burned water. Nearly destroyed a supernatural
+                bank.
+            </p>
+
+            <p>
+                And somehow...
+            </p>
+
+            <p>
+                she had survived all of it.
+            </p>
+
+            <p>
+                She hadn't become strong because her bad luck disappeared.
+            </p>
+
+            <p>
+                She had become strong because she learned how to laugh while
+                it was happening.
+            </p>
+
+        </section>
+
+
+        <!-- CHAPTER 30 -->
+
+        <section class="chapter ending" id="chapter30">
+
+            <div class="chapter-number">Chapter Thirty</div>
+
+            <h2>One Last Piece of Bad Luck</h2>
+
+            <p>
+                On the morning of her thirtieth birthday, Amelia woke early.
+            </p>
+
+            <p>
+                Daniel was asleep beside her. Sunlight entered through the
+                curtains. The house was quiet.
+            </p>
+
+            <p>
+                Everything was peaceful.
+            </p>
+
+            <p>
+                Amelia smiled.
+            </p>
+
+            <p>
+                She got out of bed.
+            </p>
+
+            <p>
+                She walked into the kitchen.
+            </p>
+
+            <p>
+                She made coffee.
+            </p>
+
+            <p>
+                She sat beside the window.
+            </p>
+
+            <p>
+                For several minutes, nothing happened.
+            </p>
+
+            <p>
+                Then she noticed something on the table.
+            </p>
+
+            <p>
+                A small black envelope.
+            </p>
+
+            <p>
+                She opened it.
+            </p>
+
+            <p>
+                Inside was a photograph.
+            </p>
+
+            <p>
+                It showed Amelia as a little girl. She was standing beside an
+                old woman. Behind them was a strange golden light.
+            </p>
+
+            <p>
+                On the back of the photograph were four words:
+            </p>
+
+            <div class="quote">
+                THIS WAS NEVER OVER.
+            </div>
+
+            <p>
+                Amelia stared at it.
+            </p>
+
+            <p>
+                Daniel walked into the kitchen.
+            </p>
+
+            <p>
+                He saw her expression.
+            </p>
+
+            <div class="quote">
+                What happened?
+            </div>
+
+            <p>
+                She handed him the photograph.
+            </p>
+
+            <p>
+                He read the message.
+            </p>
+
+            <p>
+                Neither spoke.
+            </p>
+
+            <p>
+                Then Amelia slowly smiled.
+            </p>
+
+            <p>
+                Daniel looked at her.
+            </p>
+
+            <div class="quote">
+                Why are you smiling?
+            </div>
+
+            <p>
+                She looked at the photograph.
+            </p>
+
+            <p>
+                Then at him.
+            </p>
+
+            <div class="quote">
+                Because... I think my bad luck just came back.
+            </div>
+
+            <p>
+                Daniel sighed.
+            </p>
+
+            <div class="quote">
+                Amelia.
+            </div>
+
+            <p>
+                She laughed.
+            </p>
+
+            <p>
+                "What?"
+            </p>
+
+            <p>
+                "I thought we were done."
+            </p>
+
+            <p>
+                "So did I."
+            </p>
+
+            <p>
+                He sat beside her.
+            </p>
+
+            <p>
+                For a moment, they looked at the photograph together.
+            </p>
+
+            <p>
+                Then the lights flickered.
+            </p>
+
+            <p>
+                Once.
+            </p>
+
+            <p>
+                Twice.
+            </p>
+
+            <p>
+                The coffee machine switched itself on.
+            </p>
+
+            <p>
+                A spoon rolled across the table.
+            </p>
+
+            <p>
+                The curtains moved despite the closed window.
+            </p>
+
+            <p>
+                Daniel slowly looked at Amelia.
+            </p>
+
+            <p>
+                Amelia slowly looked at Daniel.
+            </p>
+
+            <p>
+                A tiny golden spark appeared above the photograph.
+            </p>
+
+            <p>
+                It floated upward.
+            </p>
+
+            <p>
+                Then another appeared.
+            </p>
+
+            <p>
+                Then another.
+            </p>
+
+            <p>
+                Hundreds of tiny lights filled the kitchen.
+            </p>
+
+            <p>
+                Amelia stared.
+            </p>
+
+            <p>
+                Daniel stood.
+            </p>
+
+            <p>
+                The lights formed words in the air.
+            </p>
+
+            <div class="quote">
+                THE THREAD HAS CHOSEN AGAIN.
+            </div>
+
+            <p>
+                Amelia swallowed.
+            </p>
+
+            <div class="quote">
+                Daniel?
+            </div>
+
+            <p>
+                "Yes?"
+            </p>
+
+            <div class="quote">
+                Do you think this is going to be a problem?
+            </div>
+
+            <p>
+                He looked at the glowing message. Then at Amelia. Then at the
+                coffee machine, which suddenly began making coffee by itself.
+            </p>
+
+            <p>
+                He sighed.
+            </p>
+
+            <div class="quote">
+                Probably.
+            </div>
+
+            <p>
+                Amelia smiled.
+            </p>
+
+            <div class="quote">
+                Good.
+            </div>
+
+            <p>
+                Daniel laughed.
+            </p>
+
+            <p>
+                She took his hand.
+            </p>
+
+            <p>
+                Outside, the morning sun rose over the city.
+            </p>
+
+            <p>
+                Somewhere far away, something ancient opened its eyes.
+            </p>
+
+            <p>
+                Somewhere beneath the streets, a locked door unlocked itself.
+            </p>
+
+            <p>
+                Somewhere in the sky, a golden line appeared between the
+                clouds.
+            </p>
+
+            <p>
+                And somewhere in a little kitchen, Amelia Hart—the girl who
+                had spent her entire life being unlucky—laughed.
+            </p>
+
+            <p>
+                Because after everything she had survived, she had finally
+                learned the greatest secret of all:
+            </p>
+
+            <div class="quote">
+                Sometimes the universe doesn't give you good luck.
+                Sometimes it gives you someone worth being unlucky with.
+            </div>
+
+            <p>
+                And that was how Amelia's second adventure began.
+            </p>
+
+            <p>
+                Not with an explosion.
+            </p>
+
+            <p>
+                Not with a prophecy.
+            </p>
+
+            <p>
+                Not with a monster.
+            </p>
+
+            <p>
+                But with Daniel looking at the mysterious golden lights and
+                saying:
+            </p>
+
+            <div class="quote">
+                Please tell me you didn't touch anything.
+            </div>
+
+            <p>
+                Amelia looked at him innocently.
+            </p>
+
+            <div class="quote">
+                I touched the envelope.
+            </div>
+
+            <p>
+                "Anything else?"
+            </p>
+
+            <p>
+                She thought about it.
+            </p>
+
+            <div class="quote">
+                No.
+            </div>
+
+            <p>
+                A loud crash came from upstairs.
+            </p>
+
+            <p>
+                They both looked toward the ceiling.
+            </p>
+
+            <p>
+                Amelia slowly raised her hand.
+            </p>
+
+            <div class="quote">
+                Okay... I may have touched the envelope twice.
+            </div>
+
+            <p>
+                He closed his eyes.
+            </p>
+
+            <div class="quote">
+                Of course you did.
+            </div>
+
+            <p>
+                Amelia smiled.
+            </p>
+
+            <div class="quote">
+                Come on.
+            </div>
+
+            <p>
+                "Where?"
+            </p>
+
+            <p>
+                She grabbed her coat.
+            </p>
+
+            <div class="quote">
+                Let's find out what happens.
+            </div>
+
+            <p>
+                Daniel looked at her.
+            </p>
+
+            <p>
+                Then smiled.
+            </p>
+
+            <div class="quote">
+                After you.
+            </div>
+
+            <p>
+                Amelia opened the front door.
+            </p>
+
+            <p>
+                A flowerpot fell from the balcony above them.
+            </p>
+
+            <p>
+                She moved aside.
+            </p>
+
+            <p>
+                It missed her completely.
+            </p>
+
+            <p>
+                She stared at it.
+            </p>
+
+            <p>
+                Daniel stared at it.
+            </p>
+
+            <p>
+                Amelia grinned.
+            </p>
+
+            <div class="quote">
+                See?
+            </div>
+
+            <p>
+                Daniel laughed.
+            </p>
+
+            <div class="quote">
+                You're getting better.
+            </div>
+
+            <p>
+                And together they walked into the morning.
+            </p>
+
+            <p>
+                Not knowing that somewhere beyond the clouds, something was
+                watching them.
+            </p>
+
+            <p>
+                Something that had been waiting for Amelia for thirty years.
+            </p>
+
+            <p>
+                Something that knew the truth about her family.
+            </p>
+
+            <p>
+                Something that knew why the Fortune Thread had chosen her.
+            </p>
+
+            <p>
+                And something that had one final secret to reveal.
+            </p>
+
+            <p>
+                Amelia Hart had never actually been unlucky.
+            </p>
+
+            <p>
+                She had been <strong>protected.</strong>
+            </p>
+
+            <p>
+                And whatever had been protecting her...
+            </p>
+
+            <p>
+                had finally gone silent.
+            </p>
+
+            <div class="divider">
+                <span>✦</span>
+            </div>
+
+            <p class="final-line">
+                To be continued...
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+
+    <footer>
+
+        <h3>Loveline Stories</h3>
+
+        <p>
+            The Girl Who Borrowed Luck
+        </p>
+
+        <p>
+            © 2026 Loveline. A fictional story.
+        </p>
+
+    </footer>
+
+
+</body>
+</html>

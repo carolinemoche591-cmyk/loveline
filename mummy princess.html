@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Mummy Princess | An Ancient Love Story</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #100e0b;
+    color: #e9dfcc;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.9;
+}
+
+.hero {
+    min-height: 75vh;
+    padding: 70px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+        linear-gradient(rgba(10, 8, 5, 0.55),
+                        rgba(10, 8, 5, 0.96)),
+        url("https://images.unsplash.com/photo-1539768942893-daf53e448371?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    border-bottom: 2px solid #bd963e;
+}
+
+.eyebrow {
+    color: #e6bd65;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 12px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    color: #f3d58a;
+    font-size: clamp(42px, 9vw, 82px);
+    line-height: 1.1;
+    text-shadow: 0 4px 20px #000;
+    margin-bottom: 24px;
+}
+
+.hero p {
+    max-width: 650px;
+    font-size: 18px;
+    color: #f2e7d1;
+    margin-bottom: 30px;
+}
+
+.gold-button {
+    display: inline-block;
+    color: #17110a;
+    background: #d7ad52;
+    padding: 13px 27px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.gold-button:hover {
+    background: #f1d58a;
+    transform: translateY(-2px);
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 35px 22px 80px;
+}
+
+.story-info {
+    text-align: center;
+    border-bottom: 1px solid #5c4828;
+    padding: 25px 0;
+    margin-bottom: 40px;
+    color: #c9b995;
+}
+
+.story-info span {
+    display: inline-block;
+    margin: 5px 12px;
+}
+
+.chapter {
+    padding: 30px 0 45px;
+    border-bottom: 1px solid #382c1c;
+    scroll-margin-top: 20px;
+}
+
+.chapter-number {
+    color: #c79d45;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.chapter h2 {
+    color: #f0d28b;
+    font-size: clamp(26px, 5vw, 38px);
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+.chapter p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.chapter p:first-of-type::first-letter {
+    float: left;
+    font-size: 58px;
+    line-height: 0.85;
+    padding-right: 9px;
+    color: #d8ae57;
+}
+
+.dialogue {
+    color: #e5c77f;
+    font-style: italic;
+}
+
+.contents {
+    background: #1b1710;
+    border: 1px solid #594321;
+    padding: 25px;
+    margin-bottom: 45px;
+    border-radius: 6px;
+}
+
+.contents h2 {
+    color: #f0d28b;
+    margin-bottom: 15px;
+}
+
+.contents a {
+    color: #d9c9a8;
+    display: block;
+    text-decoration: none;
+    padding: 7px 0;
+    border-bottom: 1px solid #30271a;
+}
+
+.contents a:hover {
+    color: #f4cf72;
+}
+
+blockquote {
+    border-left: 3px solid #c49a44;
+    padding: 15px 22px;
+    margin: 28px 0;
+    color: #e4c985;
+    font-size: 20px;
+    font-style: italic;
+    background: #19140d;
+}
+
+.next-chapter {
+    margin-top: 25px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 35px 20px;
+    border-top: 1px solid #594321;
+    color: #a99878;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: 65vh;
+        padding: 45px 18px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 25px 18px 50px;
+    }
+
+    .chapter p {
+        font-size: 17px;
+    }
+
+    .contents {
+        padding: 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero">
+    <div class="eyebrow">An Ancient Egyptian Fantasy</div>
+
+    <h1>The Mummy Princess</h1>
+
+    <p>
+        Three thousand years ago, she was a princess.
+        Today, she is a mummy who must learn to live again.
+        But the past has awakened, and death is not finished with her.
+    </p>
+
+    <a href="#chapter-1" class="gold-button">Begin the Story ↓</a>
+</header>
+
+<main class="container">
+
+    <div class="story-info">
+        <span>✦ Fantasy</span>
+        <span>✦ Adventure</span>
+        <span>✦ Comedy</span>
+        <span>✦ Romance</span>
+    </div>
+
+    <nav class="contents">
+        <h2>Contents</h2>
+        <a href="#prologue">Prologue — The Princess Who Refused to Die</a>
+        <a href="#chapter-1">Chapter 1 — The Man Who Should Have Stayed in Bed</a>
+        <a href="#chapter-2">Chapter 2 — Three Thousand Years Is a Long Nap</a>
+        <a href="#chapter-3">Chapter 3 — The First Rule of Living with a Mummy</a>
+        <a href="#chapter-4">Chapter 4 — The Princess Discovers Television</a>
+        <a href="#chapter-5">Chapter 5 — A Royal Visit to the Supermarket</a>
+        <a href="#chapter-6">Chapter 6 — The Princess Goes Viral</a>
+        <a href="#chapter-7">Chapter 7 — The Night the Princess Cried</a>
+        <a href="#chapter-8">Chapter 8 — An Ancient Queen Learns to Cook</a>
+        <a href="#chapter-9">Chapter 9 — The Man in the Black Suit</a>
+        <a href="#chapter-10">Chapter 10 — The Princess Goes on a Date</a>
+        <a href="#chapter-11">Chapter 11 — Three Rules for a Princess</a>
+        <a href="#chapter-12">Chapter 12 — The Curse Begins to Wake</a>
+    </nav>
+
+    <section class="chapter" id="prologue">
+        <div class="chapter-number">Prologue</div>
+        <h2>The Princess Who Refused to Die</h2>
+
+        <p>
+            Three thousand years before the first person complained
+            about slow internet, the kingdom of Khemet flourished
+            beneath the golden sun of ancient Egypt.
+        </p>
+
+        <p>
+            The Nile ran through its heart like a ribbon of liquid
+            silver. Fields of wheat stretched toward the horizon.
+            White sails drifted across the water, and enormous
+            temples rose above the city.
+        </p>
+
+        <p>
+            At the center of this kingdom stood the royal palace
+            of Pharaoh Amenhotep the Third. And in that palace
+            lived Princess Nefertari Amunet.
+        </p>
+
+        <p>
+            She was twenty-one years old, the only surviving
+            daughter of the pharaoh, and the most talked-about
+            woman in the kingdom.
+        </p>
+
+        <p>
+            She was intelligent, proud, beautiful, stubborn,
+            and feared by foolish men. She could read ancient
+            languages, identify medicinal plants, calculate the
+            stars, and negotiate treaties while criticizing
+            a man's sandals.
+        </p>
+
+        <p class="dialogue">
+            "I am not marrying a man simply because his father
+            owns a large army," she told the pharaoh.
+        </p>
+
+        <p class="dialogue">
+            "What if he owns two large armies?" her father asked.
+        </p>
+
+        <p class="dialogue">
+            "Then he has twice as many soldiers and the same
+            small mind."
+        </p>
+
+        <p>
+            But a powerful priest named Kheper was preparing
+            to destroy everything she loved. He had discovered
+            an ancient power hidden beneath the royal tombs:
+            the Heart of the First Sun.
+        </p>
+
+        <p>
+            On the night the stars disappeared behind a black
+            storm, Kheper entered the royal sanctuary carrying
+            a golden dagger. The curse began when he broke
+            the seal protecting the boundary between life
+            and death.
+        </p>
+
+        <p>
+            Nefertari tried to stop him. Their hands touched
+            the sacred jewel together, and white light exploded
+            through the chamber.
+        </p>
+
+        <p>
+            When the light faded, the princess lay inside a
+            golden sarcophagus, preserved by a curse that
+            would imprison her for three thousand years.
+        </p>
+
+        <blockquote>
+            The door has been opened. The dead will walk again.
+        </blockquote>
+
+        <p>
+            She slept while her palace became sand, her kingdom
+            became history, and generations forgot the sound
+            of her father's voice.
+        </p>
+
+        <p>
+            Then, on an ordinary Tuesday morning, a young man
+            named Daniel Brooks made a very bad decision.
+            He went looking for a tomb.
+        </p>
+    </section>
+
+    <section class="chapter" id="chapter-1">
+        <div class="chapter-number">Chapter One</div>
+        <h2>The Man Who Should Have Stayed in Bed</h2>
+
+        <p>
+            Daniel Brooks was twenty-seven years old, six feet
+            tall, and possessed the kind of face that made
+            strangers trust him before he had done anything
+            to deserve their confidence.
+        </p>
+
+        <p>
+            He had warm brown skin, dark eyes, untidy black
+            curls, and a smile that appeared whenever he was
+            nervous. His faded jeans and old denim jacket had
+            survived two breakups and one unfortunate encounter
+            with a washing machine.
+        </p>
+
+        <p>
+            He was an amateur documentary photographer who
+            dreamed of making films about forgotten civilizations.
+            He was not a trained archaeologist, had no formal
+            permission to enter the tomb, and had a flashlight
+            that was already blinking.
+        </p>
+
+        <p class="dialogue">
+            "If anything happens to me," he whispered,
+            "please tell my mother I was brave."
+        </p>
+
+        <p>
+            Then he paused.
+        </p>
+
+        <p class="dialogue">
+            "No. Tell her I was pushed. She'll believe that."
+        </p>
+
+        <p>
+            Inside the tomb, he discovered faded paintings,
+            strange inscriptions, and a magnificent golden
+            sarcophagus. He had just begun taking photographs
+            when the floor trembled.
+        </p>
+
+        <p>
+            A golden hand emerged from beneath the lid.
+            Then another.
+        </p>
+
+        <p>
+            A woman sat upright inside the sarcophagus.
+            Her eyes glowed brilliant blue.
+        </p>
+
+        <p>
+            Daniel screamed, fell backward into a stone pedestal,
+            knocked over a funerary jar, and landed on his back.
+        </p>
+
+        <p class="dialogue">
+            "Slave," the woman commanded.
+        </p>
+
+        <p>
+            Daniel did not move.
+        </p>
+
+        <p class="dialogue">
+            "Wake up!"
+        </p>
+
+        <p>
+            He opened one eye and stared at the woman leaning
+            over him.
+        </p>
+
+        <p class="dialogue">
+            "You're dead!"
+        </p>
+
+        <p class="dialogue">
+            "I beg your pardon?"
+        </p>
+
+        <p class="dialogue">
+            "I saw you in the box!"
+        </p>
+
+        <p class="dialogue">
+            "That is a sarcophagus."
+        </p>
+
+        <p class="dialogue">
+            "THAT IS NOT BETTER!"
+        </p>
+
+        <p>
+            She announced herself as Princess Nefertari Amunet,
+            daughter of Pharaoh Amenhotep and rightful heir
+            to the throne of Khemet.
+        </p>
+
+        <p>
+            Daniel tried to explain that her kingdom was gone.
+            When he showed her the date on his phone, she stared
+            at the glowing screen in disbelief.
+        </p>
+
+        <p class="dialogue">
+            "What sorcery is that?"
+        </p>
+
+        <p class="dialogue">
+            "It's a phone."
+        </p>
+
+        <p class="dialogue">
+            "Is Samsung the name of the spirit?"
+        </p>
+
+        <p>
+            Daniel had a terrible feeling that his life was
+            about to become very complicated.
+        </p>
+    </section>
+
+    <section class="chapter" id="chapter-2">
+        <div class="chapter-number">Chapter Two</div>
+        <h2>Three Thousand Years Is a Long Nap</h2>
+
+        <p>
+            Getting out of the tomb took forty minutes.
+            Not because the passage was difficult, but because
+            Princess Nefertari refused to believe the world
+            outside had changed.
+        </p>
+
+        <p class="dialogue">
+            "The city is beyond those hills," she insisted.
+        </p>
+
+        <p class="dialogue">
+            "That city is now mostly sand," Daniel replied.
+        </p>
+
+        <p class="dialogue">
+            "Then we shall command the workers to rebuild it."
+        </p>
+
+        <p class="dialogue">
+            "The workers are not available."
+        </p>
+
+        <p class="dialogue">
+            "Why?"
+        </p>
+
+        <p class="dialogue">
+            "Because they're dead."
+        </p>
+
+        <p>
+            When she saw a plane cross the sky, she demanded
+            to know what it ate. When she saw cars on the road,
+            she called them chariots without horses.
+        </p>
+
+        <p class="dialogue">
+            "Your civilization has invented flying machines,
+            metal chariots, and glowing communication stones,
+            yet you have only just discovered comfortable
+            footwear?"
+        </p>
+
+        <p>
+            Daniel had no answer.
+        </p>
+
+        <p>
+            By the time they reached the road, he had already
+            established one important rule: Nefertari could
+            ask five questions in a row, but after that he
+            was allowed to drink water.
+        </p>
+
+        <p>
+            She considered the arrangement unfair.
+        </p>
+
+        <p>
+            Daniel considered it a miracle that she had agreed
+            to it at all.
+        </p>
+    </section>
+
+    <section class="chapter" id="chapter-3">
+        <div class="chapter-number">Chapter Three</div>
+        <h2>The First Rule of Living with a Mummy</h2>
+
+        <p>
+            Daniel took Nefertari to his apartment in Cairo.
+            She inspected the walls, curtains, kitchen, and
+            refrigerator with the expression of a queen
+            inspecting a poorly managed kingdom.
+        </p>
+
+        <p class="dialogue">
+            "You live like a peasant."
+        </p>
+
+        <p class="dialogue">
+            "I live like someone who pays rent."
+        </p>
+
+        <p>
+            The shower was her next enemy. When Daniel turned
+            it on, she jumped backward and demanded that he
+            stop the rain coming from the ceiling.
+        </p>
+
+        <p>
+            Later, Daniel's friend Marcus arrived and discovered
+            that the mummy was real, could speak, and was
+            currently wearing Daniel's spare T-shirt.
+        </p>
+
+        <p class="dialogue">
+            "Daniel, you brought a three-thousand-year-old
+            woman into your apartment!"
+        </p>
+
+        <p class="dialogue">
+            "I didn't exactly plan it."
+        </p>
+
+        <p class="dialogue">
+            "You never plan anything!"
+        </p>
+
+        <p>
+            Nefertari folded her arms.
+        </p>
+
+        <p class="dialogue">
+            "I wish to know what happened to my father.
+            I wish to know what happened to my people.
+            And I wish to understand this world."
+        </p>
+
+        <p>
+            Daniel promised to help her.
+        </p>
+
+        <p>
+            He had no idea how many strange lessons that
+            promise would require.
+        </p>
+    </section>
+
+    <section class="chapter" id="chapter-4">
+        <div class="chapter-number">Chapter Four</div>
+        <h2>The Princess Discovers Television</h2>
+
+        <p>
+            The following morning, Daniel woke to a scream.
+            Nefertari was standing before the television,
+            holding a pillow like a shield.
+        </p>
+
+        <p class="dialogue">
+            "THE BOX HAS CAPTURED A MAN!"
+        </p>
+
+        <p>
+            Daniel stared at the screen, where a news presenter
+            was discussing traffic.
+        </p>
+
+        <p class="dialogue">
+            "It's television!"
+        </p>
+
+        <p class="dialogue">
+            "That is a name, not an explanation!"
+        </p>
+
+        <p>
+            Daniel explained broadcasting, cameras, sound,
+            and the fact that the presenter was not imprisoned
+            inside the television.
+        </p>
+
+        <p>
+            Nefertari listened carefully.
+        </p>
+
+        <p class="dialogue">
+            "Three thousand years, and the same fools are
+            still in charge."
+        </p>
+
+        <p>
+            Daniel dropped onto the sofa.
+        </p>
+
+        <p class="dialogue">
+            "Welcome to the modern world."
+        </p>
+    </section>
+
+    <section class="chapter" id="chapter-5">
+        <div class="chapter-number">Chapter Five</div>
+        <h2>A Royal Visit to the Supermarket</h2>
+
+        <p>
+            Daniel believed a supermarket would be a safe
+            place to introduce Nefertari to modern shopping.
+            He was wrong.
+        </p>
+
+        <p>
+            She examined apples with price stickers, questioned
+            why chicken was wrapped in paper, and declared
+            that marketing was a strange and powerful god.
+        </p>
+
+        <p>
+            Her most expensive discovery was a stuffed crocodile
+            resembling Sobek, the ancient crocodile god.
+        </p>
+
+        <p class="dialogue">
+            "You have spent more money on Sobek than I have
+            spent on food this entire week," Daniel complained.
+        </p>
+
+        <p class="dialogue">
+            "Then Sobek is clearly more valuable than your food."
+        </p>
+
+        <p>
+            Daniel paid the bill.
+        </p>
+
+        <p>
+            He was beginning to understand that royal authority
+            could be defeated by very few things, and a
+            supermarket receipt was apparently one of them.
+        </p>
+    </section>
+
+    <section class="chapter" id="chapter-6">
+        <div class="chapter-number">Chapter Six</div>
+        <h2>The Princess Goes Viral</h2>
+
+        <p>
+            Daniel filmed a short video introducing Nefertari
+            to modern objects. She identified a remote control
+            as a device for controlling servants from a distance,
+            and described a toothbrush as a tiny broom for bones.
+        </p>
+
+        <p>
+            Then she addressed the camera.
+        </p>
+
+        <blockquote>
+            "Why do you take photographs of your food before
+            eating it? Does the food taste better after you
+            have shown it to strangers?"
+        </blockquote>
+
+        <p>
+            Daniel posted the video. By morning, it had
+            millions of views.
+        </p>
+
+        <p>
+            Nefertari negotiated for control over her image
+            and demanded a share of any money earned from it.
+            At present, she accepted payment in chocolate.
+        </p>
+    </section>
+
+    <section class="chapter" id="chapter-7">
+        <div class="chapter-number">Chapter Seven</div>
+        <h2>The Night the Princess Cried</h2>
+
+        <p>
+            That evening, Nefertari discovered that history
+            remembered her father but knew almost nothing
+            about his final days.
+        </p>
+
+        <p>
+            She remembered his laughter, the garden where
+            they sat together, and the songs he sang badly
+            when he was happy.
+        </p>
+
+        <p class="dialogue">
+            "They know the crown. They know the tomb.
+            They know the gold. But they do not know that
+            my father sang badly when he was happy."
+        </p>
+
+        <p>
+            Daniel sat beside her and told her about his
+            grandfather, whom he had lost before he could
+            ask all the questions he wanted to ask.
+        </p>
+
+        <p>
+            For the first time since waking, Nefertari allowed
+            herself to cry without pretending she was a queen.
+        </p>
+    </section>
+
+    <section class="chapter" id="chapter-8">
+        <div class="chapter-number">Chapter Eight</div>
+        <h2>An Ancient Queen Learns to Cook</h2>
+
+        <p>
+            Nefertari announced that Daniel's cooking was
+            an insult to civilization. She took over the
+            kitchen and produced a dish involving rice,
+            chicken, spices, and a mysterious quantity of honey.
+        </p>
+
+        <p class="dialogue">
+            "How much cumin did you add?" Daniel asked.
+        </p>
+
+        <p class="dialogue">
+            "Enough."
+        </p>
+
+        <p class="dialogue">
+            "How much is enough?"
+        </p>
+
+        <p class="dialogue">
+            "Until the ancestors approve."
+        </p>
+
+        <p>
+            The meal was surprisingly delicious. Daniel
+            finished two bowls and asked her to teach him.
+            She agreed, provided he taught her how to use
+            the internet and repaired the shower.
+        </p>
+
+        <p>
+            She was still angry about the shower.
+        </p>
+    </section>
+
+    <section class="chapter" id="chapter-9">
+        <div class="chapter-number">Chapter Nine</div>
+        <h2>The Man in the Black Suit</h2>
+
+        <p>
+            Dr. Elias Voss, a respected archaeologist with
+            a dangerous secret, watched Daniel's viral video.
+            He recognized the blue scarab on Nefertari's hand.
+        </p>
+
+        <p>
+            Voss had spent twenty-five years searching for
+            the Heart of the First Sun. If the princess had
+            returned, the ancient power might still exist.
+        </p>
+
+        <p class="dialogue">
+            "Welcome back, Your Highness."
+        </p>
+
+        <p>
+            In a black box on his desk, a fragment of red
+            stone began to glow.
+        </p>
+    </section>
+
+    <section class="chapter" id="chapter-10">
+        <div class="chapter-number">Chapter Ten</div>
+        <h2>The Princess Goes on a Date</h2>
+
+        <p>
+            At a café near the river, Nefertari asked Daniel
+            whether he was married and why he had not found
+            the right person.
+        </p>
+
+        <p>
+            She told him he was kind, somewhat foolish,
+            and possessed a pleasant face.
+        </p>
+
+        <p class="dialogue">
+            "Your face is changing color," she observed.
+        </p>
+
+        <p class="dialogue">
+            "It's the coffee," Daniel replied.
+        </p>
+
+        <p class="dialogue">
+            "The coffee is in your hand."
+        </p>
+
+        <p class="dialogue">
+            "It's very powerful coffee."
+        </p>
+
+        <p>
+            They laughed together. When they left, she slipped
+            her arm through his, and neither of them understood
+            why the gesture felt so natural.
+        </p>
+    </section>
+
+    <section class="chapter" id="chapter-11">
+        <div class="chapter-number">Chapter Eleven</div>
+        <h2>Three Rules for a Princess</h2>
+
+        <p>
+            Nefertari learned about modern life while Daniel
+            helped her build a digital archive of her lost
+            kingdom. She wrote about the palace gardens,
+            the royal kitchens, her father, and the ordinary
+            people history had forgotten.
+        </p>
+
+        <p class="dialogue">
+            "They remember the monuments, Daniel. But I want
+            them to remember the people."
+        </p>
+
+        <p>
+            Their website attracted historians, universities,
+            museums, and journalists. The world debated whether
+            she was real, a fraud, or an alien.
+        </p>
+
+        <p>
+            Nefertari had a simple response: anyone claiming
+            she came from the moon would be personally corrected.
+        </p>
+    </section>
+
+    <section class="chapter" id="chapter-12">
+        <div class="chapter-number">Chapter Twelve</div>
+        <h2>The Curse Begins to Wake</h2>
+
+        <p>
+            Daniel noticed a dark figure appearing in photographs
+            of the tomb. Nefertari recognized the figure as
+            Kheper, the priest who had cursed her kingdom.
+        </p>
+
+        <p>
+            That night, the electricity failed. A cold wind
+            moved through the apartment, and a whisper rose
+            from beneath the floor.
+        </p>
+
+        <blockquote>
+            The princess has returned.
+        </blockquote>
+
+        <p>
+            Nefertari's golden scarab began to glow. Across
+            the city, lights flickered, and from deep beneath
+            the earth came the sound of a thousand stone doors
+            opening.
+        </p>
+
+        <p>
+            The princess looked at Daniel.
+        </p>
+
+        <p class="dialogue">
+            "The curse has found me."
+        </p>
+
+        <p>
+            Then the dead began to wake.
+        </p>
+
+        <div class="next-chapter">
+            <a href="#prologue" class="gold-button">
+                Return to the Beginning ↑
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>The Mummy Princess</p>
+    <p>An ancient kingdom. A modern world. A love beyond time.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,2784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Last Signal | Loveline Stories</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        /* =========================================================
+           LOVELINE STORIES
+           THE LAST SIGNAL
+           PREMIUM NOVEL DESIGN
+        ========================================================= */
+
+        :root {
+            --paper: #f4eee2;
+            --paper-light: #fbf8f1;
+            --paper-dark: #e7dcc9;
+
+            --navy: #17243a;
+            --navy-deep: #0f1929;
+            --navy-soft: #263750;
+
+            --burgundy: #702c38;
+            --burgundy-dark: #4d1d27;
+
+            --gold: #b99555;
+            --gold-light: #d7bd82;
+
+            --ink: #252525;
+            --ink-soft: #55504a;
+
+            --white: #fffdf8;
+
+            --shadow:
+                0 20px 60px rgba(29, 24, 17, 0.16);
+
+            --transition: 0.35s ease;
+        }
+
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            background:
+                radial-gradient(
+                    circle at 20% 10%,
+                    rgba(185,149,85,0.10),
+                    transparent 25%
+                ),
+                linear-gradient(
+                    135deg,
+                    #f8f3e9,
+                    #eee5d6
+                );
+
+            color: var(--ink);
+
+            font-family:
+                "Cormorant Garamond",
+                Georgia,
+                serif;
+
+            font-size: 20px;
+            line-height: 1.9;
+
+            min-height: 100vh;
+        }
+
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        button {
+            font-family: inherit;
+        }
+
+
+        /* =========================================================
+           READING PROGRESS
+        ========================================================= */
+
+        .reading-progress {
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 0%;
+            height: 4px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--burgundy),
+                    var(--gold)
+                );
+
+            z-index: 9999;
+        }
+
+
+        /* =========================================================
+           DECORATIVE BACKGROUND
+        ========================================================= */
+
+        .page-decoration {
+            position: fixed;
+
+            width: 350px;
+            height: 350px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(185,149,85,0.12);
+
+            pointer-events: none;
+
+            z-index: -1;
+        }
+
+
+        .page-decoration.one {
+            top: -150px;
+            left: -150px;
+        }
+
+
+        .page-decoration.two {
+            bottom: -170px;
+            right: -170px;
+        }
+
+
+        /* =========================================================
+           TOP NAVIGATION
+        ========================================================= */
+
+        .topbar {
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            background:
+                rgba(23, 36, 58, 0.97);
+
+            color: var(--paper);
+
+            border-bottom:
+                1px solid rgba(215,189,130,0.35);
+
+            backdrop-filter: blur(12px);
+        }
+
+
+        .topbar-inner {
+            max-width: 1250px;
+
+            margin: auto;
+
+            padding:
+                16px 30px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+
+        .brand {
+            display: flex;
+
+            align-items: center;
+
+            gap: 12px;
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            letter-spacing: 3px;
+
+            font-size: 18px;
+
+            text-transform: uppercase;
+        }
+
+
+        .brand-heart {
+            color: #d7a6a6;
+
+            font-size: 20px;
+        }
+
+
+        .nav-links {
+            display: flex;
+
+            gap: 28px;
+
+            font-family: Inter, sans-serif;
+
+            font-size: 12px;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+        }
+
+
+        .nav-links a {
+            opacity: 0.75;
+
+            transition:
+                color var(--transition),
+                opacity var(--transition);
+        }
+
+
+        .nav-links a:hover {
+            color: var(--gold-light);
+
+            opacity: 1;
+        }
+
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            min-height: 92vh;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 100px 25px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    rgba(23,36,58,0.96),
+                    rgba(23,36,58,0.91)
+                ),
+                radial-gradient(
+                    circle at center,
+                    rgba(185,149,85,0.20),
+                    transparent 55%
+                );
+        }
+
+
+        .hero::before {
+            content: "";
+
+            position: absolute;
+
+            width: 600px;
+            height: 600px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid rgba(215,189,130,0.15);
+
+            box-shadow:
+                0 0 0 40px rgba(215,189,130,0.025),
+                0 0 0 80px rgba(215,189,130,0.02);
+
+            animation:
+                pulse 7s infinite ease-in-out;
+        }
+
+
+        @keyframes pulse {
+
+            0%,100% {
+                transform: scale(0.95);
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: scale(1.05);
+                opacity: 1;
+            }
+        }
+
+
+        .hero-content {
+            position: relative;
+
+            max-width: 900px;
+
+            z-index: 2;
+        }
+
+
+        .series {
+            color: var(--gold-light);
+
+            font-family: Inter, sans-serif;
+
+            font-size: 12px;
+
+            letter-spacing: 5px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 30px;
+        }
+
+
+        .hero h1 {
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            color: var(--paper-light);
+
+            font-size:
+                clamp(55px, 9vw, 110px);
+
+            line-height: 0.95;
+
+            font-weight: 600;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .hero h1 span {
+            color: var(--gold-light);
+
+            font-style: italic;
+        }
+
+
+        .hero-line {
+            width: 90px;
+
+            height: 1px;
+
+            background: var(--gold);
+
+            margin: 30px auto;
+        }
+
+
+        .tagline {
+            color: #d9d3c7;
+
+            font-size: 22px;
+
+            font-style: italic;
+
+            max-width: 620px;
+
+            margin: auto;
+        }
+
+
+        .hero-author {
+            margin-top: 45px;
+
+            color: var(--paper);
+
+            font-family: Inter, sans-serif;
+
+            font-size: 11px;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+        }
+
+
+        .scroll-note {
+            position: absolute;
+
+            bottom: 30px;
+
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            color: var(--gold-light);
+
+            font-family: Inter, sans-serif;
+
+            font-size: 10px;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+        }
+
+
+        .scroll-note::after {
+            content: "↓";
+
+            display: block;
+
+            font-size: 18px;
+
+            margin-top: 5px;
+        }
+
+
+        /* =========================================================
+           NOVEL CONTAINER
+        ========================================================= */
+
+        .novel {
+            max-width: 1050px;
+
+            margin: 90px auto;
+
+            padding: 0 25px;
+        }
+
+
+        .book-page {
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255,255,255,0.45),
+                    transparent
+                ),
+                var(--paper-light);
+
+            border:
+                1px solid rgba(128,99,57,0.16);
+
+            box-shadow: var(--shadow);
+
+            padding:
+                80px clamp(35px, 8vw, 110px);
+
+            position: relative;
+        }
+
+
+        .book-page::before,
+        .book-page::after {
+            content: "";
+
+            position: absolute;
+
+            width: 55px;
+            height: 55px;
+
+            border-color:
+                rgba(185,149,85,0.45);
+
+            pointer-events: none;
+        }
+
+
+        .book-page::before {
+            top: 25px;
+            left: 25px;
+
+            border-top: 1px solid;
+            border-left: 1px solid;
+        }
+
+
+        .book-page::after {
+            bottom: 25px;
+            right: 25px;
+
+            border-bottom: 1px solid;
+            border-right: 1px solid;
+        }
+
+
+        /* =========================================================
+           CHAPTER
+        ========================================================= */
+
+        .chapter {
+            margin-bottom: 130px;
+        }
+
+
+        .chapter:last-child {
+            margin-bottom: 0;
+        }
+
+
+        .chapter-number {
+            color: var(--gold);
+
+            font-family: Inter, sans-serif;
+
+            font-size: 11px;
+
+            font-weight: 600;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            text-align: center;
+
+            margin-bottom: 15px;
+        }
+
+
+        .chapter h2 {
+            color: var(--navy);
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            text-align: center;
+
+            font-size:
+                clamp(32px, 5vw, 55px);
+
+            line-height: 1.1;
+
+            font-weight: 600;
+
+            margin-bottom: 15px;
+        }
+
+
+        .chapter-subtitle {
+            text-align: center;
+
+            color: var(--burgundy);
+
+            font-style: italic;
+
+            font-size: 18px;
+
+            margin-bottom: 50px;
+        }
+
+
+        .chapter-divider {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            margin-bottom: 50px;
+        }
+
+
+        .chapter-divider span {
+            width: 60px;
+
+            height: 1px;
+
+            background: var(--gold);
+        }
+
+
+        .chapter-divider i {
+            color: var(--gold);
+
+            font-style: normal;
+
+            font-size: 15px;
+        }
+
+
+        /* =========================================================
+           STORY TEXT
+        ========================================================= */
+
+        .story p {
+            margin-bottom: 25px;
+
+            color: var(--ink-soft);
+
+            text-align: left;
+        }
+
+
+        .story p:first-of-type::first-letter {
+            float: left;
+
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            color: var(--burgundy);
+
+            font-size: 75px;
+
+            line-height: 0.75;
+
+            padding-right: 10px;
+
+            padding-top: 8px;
+        }
+
+
+        .story strong {
+            color: var(--navy);
+
+            font-weight: 700;
+        }
+
+
+        /* =========================================================
+           DIALOGUE
+        ========================================================= */
+
+        .dialogue {
+            color: var(--navy) !important;
+
+            padding-left: 25px;
+
+            border-left:
+                3px solid var(--gold);
+
+            font-style: italic;
+
+            margin:
+                30px 0 !important;
+        }
+
+
+        /* =========================================================
+           IMPORTANT MOMENTS
+        ========================================================= */
+
+        .moment {
+            margin: 45px 0;
+
+            padding: 35px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #f0e7d7,
+                    #f8f3e9
+                );
+
+            border-left:
+                5px solid var(--burgundy);
+
+            box-shadow:
+                0 10px 30px
+                rgba(40,30,20,0.08);
+        }
+
+
+        .moment p {
+            margin: 0;
+
+            color: var(--navy);
+
+            font-size: 23px;
+
+            text-align: center;
+
+            font-style: italic;
+        }
+
+
+        /* =========================================================
+           MYSTERY TEXT
+        ========================================================= */
+
+        .mystery {
+            margin: 50px 0;
+
+            padding: 45px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--navy-deep),
+                    var(--navy)
+                );
+
+            color: var(--paper);
+
+            position: relative;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 15px 45px
+                rgba(15,25,41,0.18);
+        }
+
+
+        .mystery::before {
+            content: "";
+
+            position: absolute;
+
+            width: 180px;
+            height: 180px;
+
+            border:
+                1px solid
+                rgba(215,189,130,0.25);
+
+            border-radius: 50%;
+
+            right: -70px;
+            top: -70px;
+        }
+
+
+        .mystery-label {
+            color: var(--gold-light);
+
+            font-family: Inter, sans-serif;
+
+            font-size: 10px;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 20px;
+        }
+
+
+        .mystery p {
+            color: #eee7db;
+
+            font-size: 23px;
+
+            margin: 0;
+
+            position: relative;
+        }
+
+
+        /* =========================================================
+           SCENE BREAK
+        ========================================================= */
+
+        .scene-break {
+            text-align: center;
+
+            color: var(--gold);
+
+            font-size: 20px;
+
+            letter-spacing: 8px;
+
+            margin: 55px 0;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            background:
+                var(--navy);
+
+            color: var(--paper);
+
+            text-align: center;
+
+            padding: 70px 25px;
+
+            margin-top: 100px;
+        }
+
+
+        footer .footer-brand {
+            font-family:
+                "Playfair Display",
+                Georgia,
+                serif;
+
+            font-size: 30px;
+
+            letter-spacing: 4px;
+
+            margin-bottom: 15px;
+        }
+
+
+        footer .footer-brand span {
+            color: var(--gold-light);
+        }
+
+
+        footer p {
+            color: #aaaeb5;
+
+            font-family: Inter, sans-serif;
+
+            font-size: 11px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+        }
+
+
+        /* =========================================================
+           RESPONSIVE DESIGN
+        ========================================================= */
+
+        @media (max-width: 700px) {
+
+            body {
+                font-size: 18px;
+            }
+
+
+            .topbar-inner {
+                padding: 14px 18px;
+            }
+
+
+            .nav-links {
+                display: none;
+            }
+
+
+            .brand {
+                font-size: 14px;
+
+                letter-spacing: 2px;
+            }
+
+
+            .hero {
+                min-height: 85vh;
+
+                padding: 80px 20px;
+            }
+
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+
+            .tagline {
+                font-size: 19px;
+            }
+
+
+            .novel {
+                padding: 0 12px;
+
+                margin: 50px auto;
+            }
+
+
+            .book-page {
+                padding:
+                    60px 25px;
+            }
+
+
+            .book-page::before,
+            .book-page::after {
+                width: 35px;
+                height: 35px;
+
+                top: 15px;
+            }
+
+
+            .chapter {
+                margin-bottom: 90px;
+            }
+
+
+            .chapter h2 {
+                font-size: 34px;
+            }
+
+
+            .story p:first-of-type::first-letter {
+                font-size: 60px;
+            }
+
+
+            .moment,
+            .mystery {
+                padding: 25px;
+            }
+
+
+            .mystery p,
+            .moment p {
+                font-size: 19px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- Reading Progress -->
+    <div class="reading-progress" id="readingProgress"></div>
+
+
+    <!-- Decorative Circles -->
+    <div class="page-decoration one"></div>
+    <div class="page-decoration two"></div>
+
+
+    <!-- =========================================================
+         NAVIGATION
+    ========================================================== -->
+
+    <header class="topbar">
+
+        <div class="topbar-inner">
+
+            <a href="#" class="brand">
+                <span>Loveline</span>
+                <span class="brand-heart">♥</span>
+                <span>Stories</span>
+            </a>
+
+
+            <nav class="nav-links">
+
+                <a href="#story">Story</a>
+
+                <a href="#chapters">Chapters</a>
+
+                <a href="#about">About</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="series">
+                Loveline Stories
+            </div>
+
+
+            <h1>
+                The Last <span>Signal</span>
+            </h1>
+
+
+            <div class="hero-line"></div>
+
+
+            <p class="tagline">
+                Some things should never have fallen from the sky.
+                Some secrets should never have been found.
+            </p>
+
+
+            <div class="hero-author">
+                Written by Loveline
+            </div>
+
+        </div>
+
+
+        <div class="scroll-note">
+            Begin the story
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================================
+         NOVEL
+    ========================================================== -->
+
+    <main class="novel" id="story">
+
+        <article class="book-page" id="chapters">
+
+
+            <!-- =================================================
+                 CHAPTER ONE
+            ================================================== -->
+
+            <section class="chapter">
+
+                <div class="chapter-number">
+                    Chapter One
+                </div>
+
+
+                <h2>
+                    The Sound Above
+                </h2>
+
+
+                <div class="chapter-subtitle">
+                    2:17 a.m.
+                </div>
+
+
+                <div class="chapter-divider">
+                    <span></span>
+                    <i>✦</i>
+                    <span></span>
+                </div>
+
+
+                <div class="story">
+
+                    <p>
+                        At exactly 2:17 in the morning, Alex Blackwood
+                        woke to the sound of something screaming across
+                        the sky.
+                    </p>
+
+
+                    <p>
+                        He opened his eyes but didn't move.
+                    </p>
+
+
+                    <p>
+                        For several seconds he stared at the ceiling of
+                        his small flat in London, listening to the strange
+                        metallic sound rolling through the night.
+                    </p>
+
+
+                    <p>
+                        It wasn't thunder.
+                    </p>
+
+
+                    <p>
+                        It wasn't an aircraft.
+                    </p>
+
+
+                    <p>
+                        And it certainly wasn't something he had heard
+                        before.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "Brilliant," Alex whispered.
+                        "Exactly what I needed at two in the morning."
+                    </p>
+
+
+                    <p>
+                        He sat up.
+                    </p>
+
+
+                    <p>
+                        Rain tapped softly against the window.
+                        Beyond the glass, London was almost completely
+                        still.
+                    </p>
+
+
+                    <p>
+                        Almost.
+                    </p>
+
+
+                    <p>
+                        A red glow appeared between the clouds.
+                    </p>
+
+
+                    <p>
+                        Alex stood.
+                    </p>
+
+
+                    <p>
+                        The glow became brighter.
+                    </p>
+
+
+                    <p>
+                        Then something moved through the clouds.
+                    </p>
+
+
+                    <p>
+                        It was falling.
+                    </p>
+
+
+                    <p>
+                        But it wasn't falling like a meteor.
+                    </p>
+
+
+                    <p>
+                        It was too slow.
+                    </p>
+
+
+                    <p>
+                        Too deliberate.
+                    </p>
+
+
+                    <p>
+                        Almost as if something was controlling its
+                        descent.
+                    </p>
+
+
+                    <p>
+                        Alex stepped closer to the window.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "What the hell are you?"
+                    </p>
+
+
+                    <p>
+                        The object disappeared beyond the rooftops.
+                    </p>
+
+
+                    <p>
+                        Three seconds later, the world shook.
+                    </p>
+
+
+                    <div class="moment">
+
+                        <p>
+                            The sky had just delivered something that
+                            wasn't supposed to exist.
+                        </p>
+
+                    </div>
+
+
+                    <p>
+                        Alex grabbed his coat.
+                    </p>
+
+
+                    <p>
+                        He didn't know why.
+                    </p>
+
+
+                    <p>
+                        Perhaps curiosity.
+                    </p>
+
+
+                    <p>
+                        Perhaps stupidity.
+                    </p>
+
+
+                    <p>
+                        In hindsight, he would later decide it had been
+                        both.
+                    </p>
+
+
+                    <p>
+                        He opened his apartment door and walked into the
+                        cold hallway.
+                    </p>
+
+
+                    <p>
+                        The lights flickered.
+                    </p>
+
+
+                    <p>
+                        Once.
+                    </p>
+
+
+                    <p>
+                        Twice.
+                    </p>
+
+
+                    <p>
+                        Then every light went out.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "Oh, that's encouraging."
+                    </p>
+
+
+                    <p>
+                        Somewhere below him, glass shattered.
+                    </p>
+
+
+                    <p>
+                        Alex froze.
+                    </p>
+
+
+                    <p>
+                        A woman's voice screamed from the street.
+                    </p>
+
+
+                    <p>
+                        Then came another sound.
+                    </p>
+
+
+                    <p>
+                        A low metallic hum.
+                    </p>
+
+
+                    <p>
+                        Alex looked through the stairwell window.
+                    </p>
+
+
+                    <p>
+                        Blue light illuminated the clouds.
+                    </p>
+
+
+                    <p>
+                        Something had landed.
+                    </p>
+
+
+                    <p>
+                        And whatever it was...
+                    </p>
+
+
+                    <p>
+                        people were already coming for it.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CHAPTER TWO
+            ================================================== -->
+
+            <section class="chapter">
+
+                <div class="chapter-number">
+                    Chapter Two
+                </div>
+
+
+                <h2>
+                    The Thing in the Rain
+                </h2>
+
+
+                <div class="chapter-subtitle">
+                    It wasn't a meteor.
+                </div>
+
+
+                <div class="chapter-divider">
+                    <span></span>
+                    <i>✦</i>
+                    <span></span>
+                </div>
+
+
+                <div class="story">
+
+                    <p>
+                        Alex found it in an abandoned construction site
+                        three streets from his flat.
+                    </p>
+
+
+                    <p>
+                        The rain had become heavier.
+                    </p>
+
+
+                    <p>
+                        He stood behind a concrete wall, breathing
+                        quietly as water ran down the back of his neck.
+                    </p>
+
+
+                    <p>
+                        In front of him was a crater.
+                    </p>
+
+
+                    <p>
+                        At the centre of the crater sat the object.
+                    </p>
+
+
+                    <p>
+                        It wasn't round.
+                    </p>
+
+
+                    <p>
+                        It wasn't shaped like any machine Alex had ever
+                        seen.
+                    </p>
+
+
+                    <p>
+                        It looked as if someone had taken several pieces
+                        of black metal and folded them into a shape that
+                        mathematics itself shouldn't have allowed.
+                    </p>
+
+
+                    <p>
+                        Thin blue cracks travelled across its surface.
+                    </p>
+
+
+                    <p>
+                        The light inside those cracks moved.
+                    </p>
+
+
+                    <p>
+                        Not randomly.
+                    </p>
+
+
+                    <p>
+                        It moved like something was alive inside it.
+                    </p>
+
+
+                    <div class="mystery">
+
+                        <div class="mystery-label">
+                            Unknown Object
+                        </div>
+
+                        <p>
+                            No markings. No manufacturer.
+                            No visible power source.
+                            No explanation for why it was still warm
+                            after falling from the sky.
+                        </p>
+
+                    </div>
+
+
+                    <p>
+                        Alex slowly climbed into the crater.
+                    </p>
+
+
+                    <p>
+                        His instincts told him to leave.
+                    </p>
+
+
+                    <p>
+                        Unfortunately, Alex had never been particularly
+                        good at listening to his instincts.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "Right. Quick look, then I'm going home."
+                    </p>
+
+
+                    <p>
+                        He reached toward it.
+                    </p>
+
+
+                    <p>
+                        The object moved.
+                    </p>
+
+
+                    <p>
+                        Alex immediately pulled his hand away.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "Nope."
+                    </p>
+
+
+                    <p>
+                        It moved again.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "I said nope."
+                    </p>
+
+
+                    <p>
+                        The object suddenly became silent.
+                    </p>
+
+
+                    <p>
+                        Alex frowned.
+                    </p>
+
+
+                    <p>
+                        Then a voice spoke inside his head.
+                    </p>
+
+
+                    <div class="moment">
+
+                        <p>
+                            "You came back."
+                        </p>
+
+                    </div>
+
+
+                    <p>
+                        Alex stopped breathing.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "I have never been here before."
+                    </p>
+
+
+                    <p>
+                        The voice answered.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "You have."
+                    </p>
+
+
+                    <p>
+                        Alex stared at the object.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "When?"
+                    </p>
+
+
+                    <p>
+                        The blue light inside the object became brighter.
+                    </p>
+
+
+                    <p>
+                        A memory appeared in Alex's mind.
+                    </p>
+
+
+                    <p>
+                        He was a child.
+                    </p>
+
+
+                    <p>
+                        He was standing in a forest.
+                    </p>
+
+
+                    <p>
+                        Someone was holding his hand.
+                    </p>
+
+
+                    <p>
+                        Someone whose face he couldn't remember.
+                    </p>
+
+
+                    <p>
+                        Above them...
+                    </p>
+
+
+                    <p>
+                        the same object was hanging in the sky.
+                    </p>
+
+
+                    <p>
+                        Alex stumbled backward.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "That's impossible."
+                    </p>
+
+
+                    <p>
+                        The voice whispered:
+                    </p>
+
+
+                    <div class="mystery">
+
+                        <div class="mystery-label">
+                            The First Warning
+                        </div>
+
+                        <p>
+                            "You were never supposed to remember."
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CHAPTER THREE
+            ================================================== -->
+
+            <section class="chapter">
+
+                <div class="chapter-number">
+                    Chapter Three
+                </div>
+
+
+                <h2>
+                    The Men in Grey
+                </h2>
+
+
+                <div class="chapter-subtitle">
+                    Someone had been waiting for him.
+                </div>
+
+
+                <div class="chapter-divider">
+                    <span></span>
+                    <i>✦</i>
+                    <span></span>
+                </div>
+
+
+                <div class="story">
+
+                    <p>
+                        Alex heard the vehicles before he saw them.
+                    </p>
+
+
+                    <p>
+                        Four black SUVs stopped outside the construction
+                        site.
+                    </p>
+
+
+                    <p>
+                        Doors opened simultaneously.
+                    </p>
+
+
+                    <p>
+                        Men stepped out wearing dark grey tactical
+                        uniforms.
+                    </p>
+
+
+                    <p>
+                        No police markings.
+                    </p>
+
+
+                    <p>
+                        No military insignia.
+                    </p>
+
+
+                    <p>
+                        Just a silver symbol on their shoulders.
+                    </p>
+
+
+                    <p>
+                        A circle surrounding a vertical line.
+                    </p>
+
+
+                    <p>
+                        Alex's stomach tightened.
+                    </p>
+
+
+                    <p>
+                        He had seen that symbol before.
+                    </p>
+
+
+                    <p>
+                        In the memory.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "Oh, that's not good."
+                    </p>
+
+
+                    <p>
+                        One of the men raised a weapon.
+                    </p>
+
+
+                    <p>
+                        Alex ducked.
+                    </p>
+
+
+                    <p>
+                        The shot struck the concrete wall.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "Definitely not good."
+                    </p>
+
+
+                    <p>
+                        He ran.
+                    </p>
+
+
+                    <p>
+                        Another shot.
+                    </p>
+
+
+                    <p>
+                        Then another.
+                    </p>
+
+
+                    <p>
+                        Alex jumped over a fallen barrier and slid
+                        through the mud.
+                    </p>
+
+
+                    <p>
+                        He expected to hear footsteps behind him.
+                    </p>
+
+
+                    <p>
+                        Instead...
+                    </p>
+
+
+                    <p>
+                        everything became silent.
+                    </p>
+
+
+                    <p>
+                        Alex stopped.
+                    </p>
+
+
+                    <p>
+                        The rain had stopped.
+                    </p>
+
+
+                    <p>
+                        The men had stopped.
+                    </p>
+
+
+                    <p>
+                        Even the city seemed to have stopped.
+                    </p>
+
+
+                    <p>
+                        A single raindrop hung in the air beside Alex's
+                        face.
+                    </p>
+
+
+                    <p>
+                        He reached toward it.
+                    </p>
+
+
+                    <p>
+                        His finger touched the frozen drop.
+                    </p>
+
+
+                    <p>
+                        Time suddenly returned.
+                    </p>
+
+
+                    <p>
+                        The raindrop fell.
+                    </p>
+
+
+                    <p>
+                        The men fired.
+                    </p>
+
+
+                    <p>
+                        Alex raised his hand without thinking.
+                    </p>
+
+
+                    <p>
+                        A wave of blue energy exploded outward.
+                    </p>
+
+
+                    <p>
+                        Every weapon flew from the soldiers' hands.
+                    </p>
+
+
+                    <p>
+                        Alex stared at his palm.
+                    </p>
+
+
+                    <p>
+                        Blue light crawled beneath his skin.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "What did I just do?"
+                    </p>
+
+
+                    <p>
+                        One of the soldiers whispered:
+                    </p>
+
+
+                    <div class="moment">
+
+                        <p>
+                            "The Blackwood subject is awake."
+                        </p>
+
+                    </div>
+
+
+                    <p>
+                        Alex heard the sentence.
+                    </p>
+
+
+                    <p>
+                        And for the first time that night, he became
+                        genuinely afraid.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "Subject?"
+                    </p>
+
+
+                    <p>
+                        He looked at his glowing hand.
+                    </p>
+
+
+                    <p>
+                        "What the hell have I been?"
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CHAPTER FOUR
+            ================================================== -->
+
+            <section class="chapter">
+
+                <div class="chapter-number">
+                    Chapter Four
+                </div>
+
+
+                <h2>
+                    The Woman Who Knew
+                </h2>
+
+
+                <div class="chapter-subtitle">
+                    She had been looking for him for years.
+                </div>
+
+
+                <div class="chapter-divider">
+                    <span></span>
+                    <i>✦</i>
+                    <span></span>
+                </div>
+
+
+                <div class="story">
+
+                    <p>
+                        Alex reached the river just before dawn.
+                    </p>
+
+
+                    <p>
+                        He was exhausted.
+                    </p>
+
+
+                    <p>
+                        His coat was torn.
+                    </p>
+
+
+                    <p>
+                        His hands were still glowing faintly.
+                    </p>
+
+
+                    <p>
+                        And he had absolutely no idea what was happening.
+                    </p>
+
+
+                    <p>
+                        Then he saw her.
+                    </p>
+
+
+                    <p>
+                        A woman stood beneath an old stone bridge.
+                    </p>
+
+
+                    <p>
+                        She wore a long dark coat.
+                    </p>
+
+
+                    <p>
+                        Her black hair moved slightly in the wind.
+                    </p>
+
+
+                    <p>
+                        She looked at Alex as if she had been expecting
+                        him.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "Alex Blackwood."
+                    </p>
+
+
+                    <p>
+                        Alex stopped.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "Who are you?"
+                    </p>
+
+
+                    <p>
+                        She didn't answer immediately.
+                    </p>
+
+
+                    <p>
+                        Instead, she looked at his hands.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "It's inside you."
+                    </p>
+
+
+                    <p>
+                        Alex looked at her.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "What's inside me?"
+                    </p>
+
+
+                    <p>
+                        She stepped closer.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "The thing that fell from the sky."
+                    </p>
+
+
+                    <p>
+                        Alex's face hardened.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "How do you know about it?"
+                    </p>
+
+
+                    <p>
+                        She looked toward the clouds.
+                    </p>
+
+
+                    <p>
+                        Far above them, something enormous moved behind
+                        the storm.
+                    </p>
+
+
+                    <p>
+                        Her voice became quieter.
+                    </p>
+
+
+                    <div class="mystery">
+
+                        <div class="mystery-label">
+                            The Woman's Warning
+                        </div>
+
+                        <p>
+                            "Because I've spent twelve years trying to
+                            stop it from finding you."
+                        </p>
+
+                    </div>
+
+
+                    <p>
+                        Alex stared at her.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "Twelve years?"
+                    </p>
+
+
+                    <p>
+                        She nodded.
+                    </p>
+
+
+                    <p>
+                        "And now I've failed."
+                    </p>
+
+
+                    <p>
+                        Alex looked toward the sky.
+                    </p>
+
+
+                    <p>
+                        The clouds were moving strangely.
+                    </p>
+
+
+                    <p>
+                        Something was coming.
+                    </p>
+
+
+                    <p>
+                        Something enormous.
+                    </p>
+
+
+                    <p>
+                        Alex turned back to her.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "Who are you?"
+                    </p>
+
+
+                    <p>
+                        The woman finally answered.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "Evelyn."
+                    </p>
+
+
+                    <p>
+                        She paused.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "And if you want to survive the next forty-eight
+                        hours..."
+                    </p>
+
+
+                    <p>
+                        She looked directly into his eyes.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "...you need to trust me."
+                    </p>
+
+
+                    <p>
+                        Alex gave her a tired look.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "That's a terrible opening line."
+                    </p>
+
+
+                    <p>
+                        For the first time, Evelyn smiled.
+                    </p>
+
+
+                    <p>
+                        It lasted less than a second.
+                    </p>
+
+
+                    <p>
+                        Then the sky thundered.
+                    </p>
+
+
+                    <p>
+                        And both of them looked up.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CHAPTER FIVE
+            ================================================== -->
+
+            <section class="chapter">
+
+                <div class="chapter-number">
+                    Chapter Five
+                </div>
+
+
+                <h2>
+                    Something Is Coming
+                </h2>
+
+
+                <div class="chapter-subtitle">
+                    The hunters had arrived.
+                </div>
+
+
+                <div class="chapter-divider">
+                    <span></span>
+                    <i>✦</i>
+                    <span></span>
+                </div>
+
+
+                <div class="story">
+
+                    <p>
+                        The first explosion came at sunrise.
+                    </p>
+
+
+                    <p>
+                        Windows shattered across the city.
+                    </p>
+
+
+                    <p>
+                        Birds disappeared from the sky.
+                    </p>
+
+
+                    <p>
+                        Cars stopped in the middle of the roads.
+                    </p>
+
+
+                    <p>
+                        Every electronic device in London displayed the
+                        same strange symbol.
+                    </p>
+
+
+                    <p>
+                        A circle.
+                    </p>
+
+
+                    <p>
+                        A line.
+                    </p>
+
+
+                    <p>
+                        And beneath it...
+                    </p>
+
+
+                    <p>
+                        one message.
+                    </p>
+
+
+                    <div class="mystery">
+
+                        <div class="mystery-label">
+                            Emergency Transmission
+                        </div>
+
+                        <p>
+                            RUN FROM THE LIGHT.
+                        </p>
+
+                    </div>
+
+
+                    <p>
+                        Alex stared at the message.
+                    </p>
+
+
+                    <p>
+                        Evelyn grabbed his arm.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "Don't look at the sky."
+                    </p>
+
+
+                    <p>
+                        Alex slowly looked at her.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "Why?"
+                    </p>
+
+
+                    <p>
+                        Evelyn's expression changed.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "Because it can see you."
+                    </p>
+
+
+                    <p>
+                        Alex looked upward anyway.
+                    </p>
+
+
+                    <p>
+                        He shouldn't have.
+                    </p>
+
+
+                    <p>
+                        But curiosity had already ruined his life once.
+                    </p>
+
+
+                    <p>
+                        He wasn't about to stop now.
+                    </p>
+
+
+                    <p>
+                        Above the clouds was something impossible.
+                    </p>
+
+
+                    <p>
+                        Not a plane.
+                    </p>
+
+
+                    <p>
+                        Not a satellite.
+                    </p>
+
+
+                    <p>
+                        Not a conventional spacecraft.
+                    </p>
+
+
+                    <p>
+                        It was enormous.
+                    </p>
+
+
+                    <p>
+                        Silent.
+                    </p>
+
+
+                    <p>
+                        Dark enough to make the clouds around it appear
+                        pale.
+                    </p>
+
+
+                    <p>
+                        And beneath it...
+                    </p>
+
+
+                    <p>
+                        thousands of tiny lights moved like stars.
+                    </p>
+
+
+                    <p>
+                        Alex felt the object inside him react.
+                    </p>
+
+
+                    <p>
+                        His chest became painfully hot.
+                    </p>
+
+
+                    <p>
+                        The voice returned.
+                    </p>
+
+
+                    <div class="moment">
+
+                        <p>
+                            "They have found us."
+                        </p>
+
+                    </div>
+
+
+                    <p>
+                        Alex whispered:
+                    </p>
+
+
+                    <p class="dialogue">
+                        "Who?"
+                    </p>
+
+
+                    <p>
+                        The voice answered:
+                    </p>
+
+
+                    <div class="mystery">
+
+                        <div class="mystery-label">
+                            The Last Warning
+                        </div>
+
+                        <p>
+                            "Everyone."
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CHAPTER SIX
+            ================================================== -->
+
+            <section class="chapter">
+
+                <div class="chapter-number">
+                    Chapter Six
+                </div>
+
+
+                <h2>
+                    The Blackwood File
+                </h2>
+
+
+                <div class="chapter-subtitle">
+                    Alex was not the first.
+                </div>
+
+
+                <div class="chapter-divider">
+                    <span></span>
+                    <i>✦</i>
+                    <span></span>
+                </div>
+
+
+                <div class="story">
+
+                    <p>
+                        Beneath an abandoned government facility,
+                        someone opened a file that had been sealed for
+                        twenty-one years.
+                    </p>
+
+
+                    <p>
+                        The folder contained only three photographs.
+                    </p>
+
+
+                    <p>
+                        The first showed a forest.
+                    </p>
+
+
+                    <p>
+                        The second showed the strange object.
+                    </p>
+
+
+                    <p>
+                        The third showed a young boy.
+                    </p>
+
+
+                    <p>
+                        The boy was Alex.
+                    </p>
+
+
+                    <p>
+                        He was eight years old.
+                    </p>
+
+
+                    <p>
+                        Standing beside him was a woman whose face had
+                        been scratched out.
+                    </p>
+
+
+                    <p>
+                        Beneath the photograph were six words.
+                    </p>
+
+
+                    <div class="moment">
+
+                        <p>
+                            SUBJECT SURVIVED THE FIRST CONTACT.
+                        </p>
+
+                    </div>
+
+
+                    <p>
+                        The government scientist holding the file
+                        whispered:
+                    </p>
+
+
+                    <p class="dialogue">
+                        "That's impossible."
+                    </p>
+
+
+                    <p>
+                        A voice behind him answered:
+                    </p>
+
+
+                    <p class="dialogue">
+                        "No."
+                    </p>
+
+
+                    <p>
+                        The scientist turned.
+                    </p>
+
+
+                    <p>
+                        A tall figure stood in the doorway.
+                    </p>
+
+
+                    <p>
+                        Its face was hidden beneath a dark mask.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "What's impossible..."
+                    </p>
+
+
+                    <p>
+                        The figure stepped forward.
+                    </p>
+
+
+                    <p class="dialogue">
+                        "...is that he survived twice."
+                    </p>
+
+
+                    <p>
+                        The lights went out.
+                    </p>
+
+
+                    <p>
+                        Something screamed in the corridor.
+                    </p>
+
+
+                    <p>
+                        Then the file disappeared.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CONTINUATION
+            ================================================== -->
+
+            <section class="chapter">
+
+                <div class="chapter-number">
+                    The Story Continues
+                </div>
+
+
+                <h2>
+                    More Secrets Await
+                </h2>
+
+
+                <div class="chapter-subtitle">
+                    Nothing about Alex Blackwood is what it seems.
+                </div>
+
+
+                <div class="chapter-divider">
+                    <span></span>
+                    <i>✦</i>
+                    <span></span>
+                </div>
+
+
+                <div class="story">
+
+                    <p>
+                        Alex thought the object had changed his life.
+                    </p>
+
+
+                    <p>
+                        He was wrong.
+                    </p>
+
+
+                    <p>
+                        The object hadn't changed his life.
+                    </p>
+
+
+                    <p>
+                        It had revealed it.
+                    </p>
+
+
+                    <p>
+                        Somewhere beneath the cities, governments were
+                        opening sealed laboratories.
+                    </p>
+
+
+                    <p>
+                        Somewhere in the darkness, creatures that had
+                        watched humanity for centuries were waking.
+                    </p>
+
+
+                    <p>
+                        And somewhere beyond the stars, something was
+                        travelling toward Earth.
+                    </p>
+
+
+                    <p>
+                        Something that knew Alex's name.
+                    </p>
+
+
+                    <div class="mystery">
+
+                        <div class="mystery-label">
+                            The Question
+                        </div>
+
+                        <p>
+                            What really fell from the sky?
+                        </p>
+
+                    </div>
+
+
+                    <p>
+                        Alex would eventually discover the answer.
+                    </p>
+
+
+                    <p>
+                        But by then...
+                    </p>
+
+
+                    <p>
+                        the world would already be changing.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+        </article>
+
+    </main>
+
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer id="about">
+
+        <div class="footer-brand">
+            Loveline <span>♥</span> Stories
+        </div>
+
+        <p>
+            The Last Signal · Written by Loveline
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================== -->
+
+    <script>
+
+        /* Reading progress */
+
+        window.addEventListener("scroll", function () {
+
+            const progress =
+                document.getElementById("readingProgress");
+
+            const scrollTop =
+                window.scrollY;
+
+            const documentHeight =
+                document.documentElement.scrollHeight -
+                window.innerHeight;
+
+            const percentage =
+                (scrollTop / documentHeight) * 100;
+
+            progress.style.width =
+                percentage + "%";
+
+        });
+
+
+        /* Smooth reveal */
+
+        const chapters =
+            document.querySelectorAll(".chapter");
+
+
+        const observer =
+            new IntersectionObserver(
+
+                (entries) => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.style.opacity = "1";
+
+                            entry.target.style.transform =
+                                "translateY(0)";
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: 0.08
+                }
+
+            );
+
+
+        chapters.forEach(chapter => {
+
+            chapter.style.opacity = "0";
+
+            chapter.style.transform =
+                "translateY(30px)";
+
+            chapter.style.transition =
+                "opacity 1s ease, transform 1s ease";
+
+            observer.observe(chapter);
+
+        });
+
+    </script>
+
+</body>
+</html>
